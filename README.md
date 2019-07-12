@@ -27,3 +27,11 @@ Bunlar dışında üstüne çalıştığım projeye `redux` kurdum ve klasör ya
 Bugün üstüne çalıştığım uygulama üstünde major bir değişiklik yaparak QR kodu okuma kütüphanesini değiştirdim çünkü eski kütüphanenin algılama süresi yavaştı. Ayrıca QR kodu okuma sayfasına flash ışık açma-kapama komponenti ekledim. React-Native içinde aldığım bir çok build hatasının nedenini çözdüm ve geliştirme ortamım tam olarak kurulmuş oldu.
 
 Yaptığım projeye kodun kalitesini korumak için `Editor Config`, `EsLint`, `Prettier`, `Husky` ve `Lint-Staged` ekledim ve ayarlarını yaptım. Bunun dışında projeye ait `markdown` formatında dokümanlar yazdım.
+
+## Day-04
+
+Bugün üstüne çalıştığım uygulama için 3 komponenetin tasarımını ve 3 sayfayı düzenledim. Proje'nin kod kalitesini yükseltmek amaçlı bazı algoritmaları değiştirdim. `Deep Linking` konusu üstüne araştırma yaptım ve uygulamaya ihtiyacım yönünde ekledim. `Deep Linking` mobil programcılıkta tarayıcı yada diğer uygulamalar üstünden hedeflenen bir uygulamanın istenen bir sayfasını vs. açma işine deniyor. Uygulama için bir sayfanın `header` bölgesine `dropdown menu` gerekiyordu, bunu modal ile değiştirmeye karar verdim. QR kodu okuyunca titreştirme özelliği ekledim.
+
+React-Native biliyordum öncesinde ama unuttuğum yerler vardı, unuttuğum konuları proje ihtiyacı doğrultusudna tek tek yeniden öğrendim. Uygulama hızlı gelişiyor ve insanların problemlerine gerçekten yardım edecek özellikler geliştiriyorum.
+
+Flash ışık açma-kapama komponentine QR kodu görünce otomatik ışık açma özelliği eklemek için araştırma yaptım, bu özellik kesin değil, eğer kullandığım komponenet izin verirse ekleyebileceğim bir şey.
