@@ -35,3 +35,17 @@ Bugün üstüne çalıştığım uygulama için 3 komponenetin tasarımını ve 
 React-Native biliyordum öncesinde ama unuttuğum yerler vardı, unuttuğum konuları proje ihtiyacı doğrultusudna tek tek yeniden öğrendim. Uygulama hızlı gelişiyor ve insanların problemlerine gerçekten yardım edecek özellikler geliştiriyorum.
 
 Flash ışık açma-kapama komponentine QR kodu görünce otomatik ışık açma özelliği eklemek için araştırma yaptım, bu özellik kesin değil, eğer kullandığım komponenet izin verirse ekleyebileceğim bir şey.
+
+## Day-05
+
+Ofiste kimse olmaması yüzünden ve hafta sonu sebebiyle 4 gün evde boş zamanımda uygulamayı geliştirdim. Sonucunda bugün uygulamanın %90'ı bitti ve iş yerindeki insanlara gösterdim. Üstüne bazı kararlar aldık ve uygulama için yeni bir yol çizdik, bazı özellikler değiştiği için uygulama %50 bitti diyebilirim. Herneyse, bugün firmanın `git` servisine kaydoldum ve hesabım açıldı. Bunun dışında `asana` servisi ile bir `todo list` hazırlayıp öncelikleri sıraladık. Uygulama beklediğimden daha geniş bir seviyeye çekildi ve yeni özellikler hakkında konuştuk. Hazırladığım uygulama tüm `kokpit` servisini kapsıyor artık. Kokpit'i uygulamaya entegre etmek için `InBrowser` adında bir reack-native kütüphanesi kullanmayı planlıyorum.
+
+Çoklu dil desteği eklenecek, bunun üstüne araştırma yapmam gerekiyor. `Deep Linking` mevzusundan vaz geçildi, uygulamanın `standalone` şekilde çalışması isteniyor. QR kod içindeki static veri yerine artık sunucudan veri çekme şeklinde olacak, yani artık QR kod içinde sadece id bilgisi barınıyor olacak.
+
+Bu bir kaç gün içinde bir çok özellik ekledim, yanında bir çok şey de öğrendim; 
+
+- Liste manipülasyonu
+- Jsx rerender force
+- Child Komponentten Parent komponenetin update ettirilmesi
+
+gibi..
