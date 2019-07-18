@@ -49,3 +49,15 @@ Bu bir kaç gün içinde bir çok özellik ekledim, yanında bir çok şey de ö
 - Child Komponentten Parent komponenetin update ettirilmesi
 
 gibi..
+
+## Day-06
+
+Bugün projeye `WebView` komponenti ekledim ve bu komponentin `props` ve `method`'larını öğrendim. WebView içine javascript kodu gömebiliyoruz, atılan isteklerin linklerini yakalayabiliyoruz, web sitesi ve react native uygulaması arasında iletişim kurabiliyoruz. Normalde `InBrowser` komponenetini kullanacaktım ancak github yıldızı düşük olduğu için offical olarak desteklenen komponeneti kullanmaya karar verdim.
+
+Projeye `çoklu dil desteği` ekledim. Hatta bunun yanında ibranice ve arapça dillerinde olan `RTL` özellikli diller için uyum ekledim. Uygulamayı ingilizce ve türkçe olarak dil desteği de ekledim en sonunda.
+
+Bugün `i18n`'in `internationalization` anlamına geldiğini öğrendim, 18 aradaki 18 harfi temsil ediyor.
+
+Yürüttüğüm proje için kokpit sistemine özel bir API hazırlanıyor, API hazırladıktan sonra static QR kod okuma yapısını dinamik hale getiremem gerekiyor.
+
+Yazdığım uygulama toplamda `1927` satır ve `27` dosyaya ulaştı. Projenin klasör yapısını güzel tuttuğum için ve temiz kod yazdığım için proje hızlı ilerliyor.
