@@ -61,3 +61,15 @@ Bugün `i18n`'in `internationalization` anlamına geldiğini öğrendim, 18 arad
 Yürüttüğüm proje için kokpit sistemine özel bir API hazırlanıyor, API hazırladıktan sonra static QR kod okuma yapısını dinamik hale getiremem gerekiyor.
 
 Yazdığım uygulama toplamda `1927` satır ve `27` dosyaya ulaştı. Projenin klasör yapısını güzel tuttuğum için ve temiz kod yazdığım için proje hızlı ilerliyor.
+
+## Day-07
+
+Bugün fazla kod yazmadım, günümü kullanacağım teknolojiler üstüne araştırma yaparak geçirdim. Axios, fetch, gesture handler, event emitter, intent launcher gibi konulara baktım. Bunun dışında projeye `Clean Code` ve `Advanced Usage` dokümanları yazdım.
+
+`Expo` kütüphanelerini projede kullanmak için `unimodlues` adlı bir kütüphaneyi projeye entegre ettim. AndroidIntentLauncher kütüphanesini kullanılır duruma getirdim bunun yardımı ile çünkü kişi kamera izni vermediğinde sonradan tıklayıp izin vermesi gereken sayfayı açacak bir buton yaratmam gerekiyordu.
+
+Django'da `migration` kavramını görmüştüm ancak neden yapıldığını bilmiyordum, Django'ya özgü bir şey sanıyordum, PHP ile de yapılabildiğini öğrendim. Kısaca migration yöntemi ile `database`'imize kolon ekleme, silme ve değiştirme yapabiliyoruz, ileride sürüm yönetimi kullanırken migration ile database'i manuel değiştirmek yerine otomatik şekillendirebiliyoruz.
+
+Proje, müşteriye sunulmak isteniyor bu yüzden en basit haliyle bitirmem için 1 hafta süre verildi. Yapacağım şeyler kesin olarak kararlaştırıldı ve bir `guideline` oluşturduk. Proje için şuanda bir API hazırlanıyor, API hazırlanana kadar aynı anda uygulama geliştirebilmem için `hardcoded` bir API verildi.
+
+Proje tam gaz ileri sürüyor.
