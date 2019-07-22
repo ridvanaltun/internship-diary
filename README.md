@@ -73,3 +73,15 @@ Django'da `migration` kavramını görmüştüm ancak neden yapıldığını bil
 Proje, müşteriye sunulmak isteniyor bu yüzden en basit haliyle bitirmem için 1 hafta süre verildi. Yapacağım şeyler kesin olarak kararlaştırıldı ve bir `guideline` oluşturduk. Proje için şuanda bir API hazırlanıyor, API hazırlanana kadar aynı anda uygulama geliştirebilmem için `hardcoded` bir API verildi.
 
 Proje tam gaz ileri sürüyor.
+
+# Day-08
+
+Bir hafta içinde projeyi bitirmem gerektiği için haftasonu ve bugün proje üstüne geliştirmeler yaptım. Statik veri yapısını sonunda dinamik hale getirdim, bunun anlamı; Artık QR kodunu gösterince bir API'ye POST atıyoruz ve gelen cevaba göre uygulama şekilleniyor. QR kodu bastırmış kişi Kokpit hesabından QR içindeki verileri değiştirebilir demek. WebView komponentine `Javascript DOM Manpülasyonu` ile belirlediğim bir elemente buton gömdüm. Web sayfası içindeki buton tıklamasını algılayabiliyorum, uygulama üstünden istediğim sayfaya götürebiliyorum kullanıcıyı. Bundan sonra uygulama üstünden WebView'a girince eğer gösterdiğim id değerine sahip bir element varsa kod otomatik `inject` ediliyor.
+
+Kullanıcı uygulamayı kapatıp açtığında verileri kaybolmasın diye `redux-persist` ve `async storage` kütüphanelerini entegre ettim, saklamak istediğim verileri de konfigüre ettim.
+
+Asana üstündeki tüm öncelikli işler bitti. Önemli gördüğüm yeni `task`'lar oluşturdum ve yüksek öncelikli işler başlığı altına madde madde yazdım.
+
+Uygulama için bir icon, splash screen ve logo bulmam gerekiyordu, raw materyalleri eposta ile aldım, gerekli düzenlemeleri yapıp bu materyalleri uygulamaya yedirmem gerekiyor. 
+
+Tüm bunlar dışında şirkette ki Tolga abi sohbet sırasında `Webpack`'in JavaScript vs CSS'de sadece kullandığımız parçaları sayfaya include edebildiğini öğrendim. Webpack nedir duymuştum ancak ben sadece kodu `minify` ve `bundle` ettiğini sanıyordum, meğersem kullanılmayan kodları çıkarma gibi bir işlevi de varmış. Peki bu bzie ne sağlar? jQuery, Bootstrap gibi framework'ler sayfamızı çok ağır hale getirebilir, kullanıcı deneyimi amaçlı sayfanın hızlı yüklenmesini isteriz. Sayfamızı Webpack'ten geçirirsek kullanmadığımız fonksiyonlar ve stiller sayfadan siliniyor.
