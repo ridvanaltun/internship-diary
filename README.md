@@ -85,3 +85,13 @@ Asana üstündeki tüm öncelikli işler bitti. Önemli gördüğüm yeni `task`
 Uygulama için bir icon, splash screen ve logo bulmam gerekiyordu, raw materyalleri eposta ile aldım, gerekli düzenlemeleri yapıp bu materyalleri uygulamaya yedirmem gerekiyor. 
 
 Tüm bunlar dışında şirkette ki Tolga abi sohbet sırasında `Webpack`'in JavaScript vs CSS'de sadece kullandığımız parçaları sayfaya include edebildiğini öğrendim. Webpack nedir duymuştum ancak ben sadece kodu `minify` ve `bundle` ettiğini sanıyordum, meğersem kullanılmayan kodları çıkarma gibi bir işlevi de varmış. Peki bu bzie ne sağlar? jQuery, Bootstrap gibi framework'ler sayfamızı çok ağır hale getirebilir, kullanıcı deneyimi amaçlı sayfanın hızlı yüklenmesini isteriz. Sayfamızı Webpack'ten geçirirsek kullanmadığımız fonksiyonlar ve stiller sayfadan siliniyor.
+
+# Day-09
+
+Bugün `svg` uzantılı dosyaların react native içine nasıl çağrıldığını ve .svg dosyalarının pdf içinde tutulabildiklerini öğrendim. Photoshop programının tek tıkla .svg çıktı verebildiğini de öğrendim.
+
+Üstüne çalıştığım uygulama için icon ve logo hazırladım, gelecek gün `splash screen` hazırlamayı planlıyorum. Bunlar dışında gerekli API'lar hazır olmadığı için uygulama içinde bazı bug ve mantık hatalarını düzelttim sadece. Kullanıcının bilgileri. API'ye post atabilmek için `sessionid` denen bir değere sahip olmam gerekiyor, bu değeri kullanıcı webview ile giriş yaptıktan sonra cookie bilgisini çekerek elde ediyorum. Sessionid ile kullanıcı post atabileceği için kokpit'e kolayca auth işlemleri için SPI yazılabilir, elimdeki işi bitirince bu konuyu açıp ileride uygulamanın login olma kısmını implemente edebilirim.
+
+Uygulamayı `linter`'a sokup 144 tane linter hatası çözdüm. Projenin klasör yapısını ufak ta olsa değiştirdim. Önceden kulay kullanım amaçlı parçaladığım bir kaç dosyayı tek çatı altında birleştirdim çünkü ayrı kullanmak işimi kolaylaştırmak yerine zorlaştırıyordu.
+
+Ufak mantık hataları dışında bir şey kalmadı, API hazırlanmasını bekliyorum.
