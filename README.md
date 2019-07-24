@@ -90,8 +90,18 @@ Tüm bunlar dışında şirkette ki Tolga abi sohbet sırasında `Webpack`'in Ja
 
 Bugün `svg` uzantılı dosyaların react native içine nasıl çağrıldığını ve .svg dosyalarının pdf içinde tutulabildiklerini öğrendim. Photoshop programının tek tıkla .svg çıktı verebildiğini de öğrendim.
 
-Üstüne çalıştığım uygulama için icon ve logo hazırladım, gelecek gün `splash screen` hazırlamayı planlıyorum. Bunlar dışında gerekli API'lar hazır olmadığı için uygulama içinde bazı bug ve mantık hatalarını düzelttim sadece. Kullanıcının bilgileri. API'ye post atabilmek için `sessionid` denen bir değere sahip olmam gerekiyor, bu değeri kullanıcı webview ile giriş yaptıktan sonra cookie bilgisini çekerek elde ediyorum. Sessionid ile kullanıcı post atabileceği için kokpit'e kolayca auth işlemleri için SPI yazılabilir, elimdeki işi bitirince bu konuyu açıp ileride uygulamanın login olma kısmını implemente edebilirim.
+Üstüne çalıştığım uygulama için icon ve logo hazırladım, gelecek gün `splash screen` hazırlamayı planlıyorum. Bunlar dışında gerekli API'lar hazır olmadığı için uygulama içinde bazı bug ve mantık hatalarını düzelttim sadece. Kullanıcının bilgileri. API'ye post atabilmek için `sessionid` denen bir değere sahip olmam gerekiyor, bu değeri kullanıcı webview ile giriş yaptıktan sonra cookie bilgisini çekerek elde ediyorum. Sessionid ile kullanıcı post atabileceği için kokpit'e kolayca auth işlemleri için API yazılabilir, elimdeki işi bitirince bu konuyu açıp ileride uygulamanın login olma kısmını implemente edebilirim.
 
 Uygulamayı `linter`'a sokup 144 tane linter hatası çözdüm. Projenin klasör yapısını ufak ta olsa değiştirdim. Önceden kulay kullanım amaçlı parçaladığım bir kaç dosyayı tek çatı altında birleştirdim çünkü ayrı kullanmak işimi kolaylaştırmak yerine zorlaştırıyordu.
 
 Ufak mantık hataları dışında bir şey kalmadı, API hazırlanmasını bekliyorum.
+
+# Day-10
+
+Bugün `splash screen` tasarladım ve android'e entegre ettim. Splash screen tasarlamak kolay olur sanıyorum çünkü daha önceleri `expo` kullanırken 3dklık bir işti, react-native'de bu işi 2 saate çıktı, tüm ekranlara uyacak çözünürlükte resim hazırlamak derken 2.30 saate kadar çıktı. Bugün splash screen için native kod yazmak zorunda kaldım, `color.xml`, `string.xml`. `style.xml` gibi dosyalarla android bileşenlerine değişken nasıl yüklenir görmüş oldum. Android de `activity` yapısını gördüm.
+
+`react-native-cookies` bağımlılığını projeden kaldırdım çünkü kütüphanenin `maintainer`'ı yok. Geliştirilmesi bırakılmış ve derlerken ufak ta olsa bir kaç uyarı mesajı veriyor. Bu kütüphane yerine Webview'a cookie döndüren bir javascript kodu yazdım ve dönen sonucu işleyip obje haline getirecek bir fonksiyon yazdım.
+
+Bunun dışında webview üstündeki kokpit login ekranında kullanıcı giriş yaparken normalde dil seçiyor ve ona göre giriş yapıyor. Çoklu dil desteğini login ekranındaki dil seçim yapısına entegre ettim. Artık kişi login olurken seçtiği dil ile uygulamayı kullanabiliyor.
+
+Projeyi react-native `0.59.4`'tan `0.60.4`'a geçirmeye çalıştım. Projede kullandığım bazı kütüphaneler AndroidX desteklemediği için derelme hataları geldi, `jetifier` adında bir programı projeye entegre ederek hataalrdan kurtuldum ancak proje derlense bile telefonda açılmıyordu. Bu sebeple eski sürüme geri döndüm.
