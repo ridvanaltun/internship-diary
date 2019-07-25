@@ -105,3 +105,11 @@ Bugün `splash screen` tasarladım ve android'e entegre ettim. Splash screen tas
 Bunun dışında webview üstündeki kokpit login ekranında kullanıcı giriş yaparken normalde dil seçiyor ve ona göre giriş yapıyor. Çoklu dil desteğini login ekranındaki dil seçim yapısına entegre ettim. Artık kişi login olurken seçtiği dil ile uygulamayı kullanabiliyor.
 
 Projeyi react-native `0.59.4`'tan `0.60.4`'a geçirmeye çalıştım. Projede kullandığım bazı kütüphaneler AndroidX desteklemediği için derelme hataları geldi, `jetifier` adında bir programı projeye entegre ederek hataalrdan kurtuldum ancak proje derlense bile telefonda açılmıyordu. Bu sebeple eski sürüme geri döndüm.
+
+# Day-11
+
+Bugün ilk defa git sunucusuna commit attım. Splash screen sonrası oluşan status bar sorunu vardı, onu çözdüm. Lint-staged aracını yanlış konfigüre etmişim, onu düzelttim. Webview içinde site dışından bir linke tıklandığında telefondaki tarayıcıdan açtırma özelliği ekledim.
+
+Android Lolipop kurup uygulamanın teoride desteklediği en düşük sürümü emülatörde denedim ve sorun olmadı, güzel çalışıyor. Koleksiyon özelliği için uygulamada bir altyapı vardı, bu özellik pratikte pek kullanılmayacağı için altyapısını kaldırdım.
+
+Bugün ayrıca `lottie` adı verilen bir kütüphaneyi entegre ettim, bu kütüphanein amacı `adobe after effects` ile tasarlanan animasyonları uygulamaya yerleştirebilmek. Hata aldığım için kurulumu kaldırmak zorunda kaldım.
