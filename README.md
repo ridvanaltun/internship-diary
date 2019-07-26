@@ -113,3 +113,13 @@ Bugün ilk defa git sunucusuna commit attım. Splash screen sonrası oluşan sta
 Android Lolipop kurup uygulamanın teoride desteklediği en düşük sürümü emülatörde denedim ve sorun olmadı, güzel çalışıyor. Koleksiyon özelliği için uygulamada bir altyapı vardı, bu özellik pratikte pek kullanılmayacağı için altyapısını kaldırdım.
 
 Bugün ayrıca `lottie` adı verilen bir kütüphaneyi entegre ettim, bu kütüphanein amacı `adobe after effects` ile tasarlanan animasyonları uygulamaya yerleştirebilmek. Hata aldığım için kurulumu kaldırmak zorunda kaldım.
+
+# Day-12
+
+Bugün Kokpit API'ına `POST` isteği atabilmek için `Postman` adında bir yazılımı kullanmaya başladım. POST atarken `body` kısmına data, `header` kısmınada `auth` bilgileri konduğunu öğrendim. API dokümantasyonu yazabilmek için `Swagger` adında bir dokümente aracı kullanıldığını öğrendim. Bugün ilk defa `release` aldım ve uygulamayı `production mode`'unda test ettim, release alırken karşıma çıkan sorunları çözdüm. İnternet yavaşlığında kullanıcı deneyimini arttırmak için loading ekranları tasarladım ve uygulamanın gerekli gördüğüm yerlerine koydum.
+
+`CodePush` adında bir teknolojinin varlığını öğrendim, normalde bir uygulamayı güncellediğimizde IOS için günlerce Android için saatlerce beklemek zorunda kalıyoruz. React-Native ve Cordova ile `hybrid` yapıları sayesinde bu sorunu aşmak mümkün. Yaptığımız tüm değişiklikler anında uygulamanın yüklü olduğu telefonlara `CodePush` sunucusu üstünden yüklenebiliyor.
+
+Bunun dışında uygulamanın ikonuna `badge` eklemek için araştırma yaptım. IOS ta bu iş standart ancak Android'de şirketler kendilerine has `launcher` çıkardıkları için sabit bir çözüm ve native bir destek yok, yine de Android'de bu işi yapan 3. parti kütüphaneler var. Uygulama ikonuna badge eklesek bile her telefonda bu badge gözükmeyecek çünkü react-native için 3. parti kütüphaneler popüler değil.
+
+Bugün HTTP kodlarını kediler üstünden anlatan [bu hoş siteyi](https://http.cat/) buldum.
