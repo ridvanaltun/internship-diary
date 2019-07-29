@@ -123,3 +123,11 @@ Bugün Kokpit API'ına `POST` isteği atabilmek için `Postman` adında bir yaz�
 Bunun dışında uygulamanın ikonuna `badge` eklemek için araştırma yaptım. IOS ta bu iş standart ancak Android'de şirketler kendilerine has `launcher` çıkardıkları için sabit bir çözüm ve native bir destek yok, yine de Android'de bu işi yapan 3. parti kütüphaneler var. Uygulama ikonuna badge eklesek bile her telefonda bu badge gözükmeyecek çünkü react-native için 3. parti kütüphaneler popüler değil.
 
 Bugün HTTP kodlarını kediler üstünden anlatan [bu hoş siteyi](https://http.cat/) buldum.
+
+# Day-13
+
+Bugün PDF uzantılı bir dosyadan vektörel bir grafik çıkardım, bu işi yaparken `inkspace` adlı bir yazılım kullandım. Amacım çıukardığım vektörel resimleri app içinde kullanmaktı ama çıkan bir takım hatalar yüzünden başarılı olamadım. `Async` işler için bir loading komponenti hazırladım ve appteki `fetch` kullandığım yerlere yerleştirdim. Bugün yazdığım app incelendi ve maddeler şekilde yapılması gereken ve değiştirilmesi gereken şeyler listelendi, aynı gün içinde istenilen şeyleri yerine getirdim. 
+
+Notification için araştırmalar devam ediyor, Kokpit'in hali hazırda bir notification sistemi olduğu için `best practice` yerine Kokpit'e özel bir notification sistemi düşünülüyor. Notification sisteminin temelde nasıl çalıştığını öğrendim ve altyapıyı nasıl kurmam gerekeceği hakkında bir fikir sahibi oldum.
+
+App'in navigator yapısı tamamen değiştirildi. NavigationService adında ektra bir bölüm vardı o yapıyı kaldırdım ve kodu basitleştirdim.
