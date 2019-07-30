@@ -126,8 +126,29 @@ Bugün HTTP kodlarını kediler üstünden anlatan [bu hoş siteyi](https://http
 
 # Day-13
 
-Bugün PDF uzantılı bir dosyadan vektörel bir grafik çıkardım, bu işi yaparken `inkspace` adlı bir yazılım kullandım. Amacım çıukardığım vektörel resimleri app içinde kullanmaktı ama çıkan bir takım hatalar yüzünden başarılı olamadım. `Async` işler için bir loading komponenti hazırladım ve appteki `fetch` kullandığım yerlere yerleştirdim. Bugün yazdığım app incelendi ve maddeler şekilde yapılması gereken ve değiştirilmesi gereken şeyler listelendi, aynı gün içinde istenilen şeyleri yerine getirdim. 
+Bugün PDF uzantılı bir dosyadan vektörel bir grafik çıkardım, bu işi yaparken `inkspace` adlı bir yazılım kullandım. Amacım çıkardığım vektörel resimleri app içinde kullanmaktı ama hatalar yüzünden başarılı olamadım. `Async` işler için bir loading komponenti hazırladım ve appteki `fetch` kullandığım yerlere yerleştirdim. Bugün yazdığım app incelendi ve maddeler şekilde yapılması gereken ve değiştirilmesi gereken şeyler listelendi, aynı gün içinde istenilen şeyleri yerine getirdim. 
 
 Notification için araştırmalar devam ediyor, Kokpit'in hali hazırda bir notification sistemi olduğu için `best practice` yerine Kokpit'e özel bir notification sistemi düşünülüyor. Notification sisteminin temelde nasıl çalıştığını öğrendim ve altyapıyı nasıl kurmam gerekeceği hakkında bir fikir sahibi oldum.
 
 App'in navigator yapısı tamamen değiştirildi. NavigationService adında ektra bir bölüm vardı o yapıyı kaldırdım ve kodu basitleştirdim.
+
+# Day-14
+
+Bugün pek kod yazmadım, `docker` nedir ned iğildir, nasıl kullanılır bunları öğrendim. Bunun sebebi kapalı sistemler için uygulamaya `notification server` entegre etmekti. Normalde notification server için Firebase, Google, Apple, Amazon vs. şirketlerin `cloud messaging` servisleri kullanılıyor.
+
+Belli başlı notification servisleri:
+
+- `FCM` -> Firebase Cloud Messaging
+- `GCM` -> Google Cloud Messaging
+- `APNS` -> Apple Push Notification Service
+
+
+`docker-compose` adlı bir aracı kullanmayı öğrendim. Docker ile `nginx`, `php-fpm` ve `php`  birlikte bir konteynır olarak ayağa kaldırdım. İlk docker tecrübem bu oldu. `Apache` ie `nginx` arasındaki farkları öğrendim. `Dockerfile` yapısını ve neden kullanıldığını öğrendim. Bunun dışında `docker-compose.yml` dosyalarındaki `volume` yapısını öğrendim ve tüm öğrendiğim şeyleri not aldım. 
+
+Tüm bunları öğrenmemin seneni `notification server` ayağa kaldırmak olsada sonradan vazgeçildi. Bunun 3 sebebi var; 
+
+- Kokpit'in kendine has bir bildirim sistemi var.
+- Kapalı sistemler ile çalışmamız gerekiyor.
+- Client için yazılmış bir kütüphane local bildirimlere izin veriyor.
+
+QR kod için gerekli olan API hala bitmedi, halen `dummy data` kullanıyorum.
