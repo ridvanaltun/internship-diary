@@ -8,7 +8,7 @@ Staja ön hazırlık olarak şirkette benden sorumlu olan Özcan bey'in yönlend
 
 ## Day-01
 
-Bugün ilk staj günümdü. İlk projemi aldım. Proje `kokpit.io` sistemi için kısmi bir mobil uygulama geliştirmek. Projeye `Vue Native` ile başladım ancak sonrasında `React-Native`'e geçtim. Bunun sebebi `Vue Native`'in olgunlaşmamış olması. 
+Bugün ilk staj günümdü. İlk projemi aldım. Proje `kokpit.io` sistemi için kısmi bir mobil uygulama geliştirmek. Projeye `Vue Native` ile başladım ancak sonrasında `React-Native`'e geçtim. Bunun sebebi `Vue Native`'in olgunlaşmamış olması.
 
 Projemde `QR kod` okuma ve `URL encoding` gibi konular var.
 
@@ -42,7 +42,7 @@ Ofiste kimse olmaması yüzünden ve hafta sonu sebebiyle 4 gün evde boş zaman
 
 Çoklu dil desteği eklenecek, bunun üstüne araştırma yapmam gerekiyor. `Deep Linking` mevzusundan vaz geçildi, uygulamanın `standalone` şekilde çalışması isteniyor. QR kod içindeki static veri yerine artık sunucudan veri çekme şeklinde olacak, yani artık QR kod içinde sadece id bilgisi barınıyor olacak.
 
-Bu bir kaç gün içinde bir çok özellik ekledim, yanında bir çok şey de öğrendim; 
+Bu bir kaç gün içinde bir çok özellik ekledim, yanında bir çok şey de öğrendim;
 
 - Liste manipülasyonu
 - Jsx rerender force
@@ -74,7 +74,7 @@ Proje, müşteriye sunulmak isteniyor bu yüzden en basit haliyle bitirmem için
 
 Proje tam gaz ileri sürüyor.
 
-# Day-08
+## Day-08
 
 Bir hafta içinde projeyi bitirmem gerektiği için haftasonu ve bugün proje üstüne geliştirmeler yaptım. Statik veri yapısını sonunda dinamik hale getirdim, bunun anlamı; Artık QR kodunu gösterince bir API'ye POST atıyoruz ve gelen cevaba göre uygulama şekilleniyor. QR kodu bastırmış kişi Kokpit hesabından QR içindeki verileri değiştirebilir demek. WebView komponentine `Javascript DOM Manpülasyonu` ile belirlediğim bir elemente buton gömdüm. Web sayfası içindeki buton tıklamasını algılayabiliyorum, uygulama üstünden istediğim sayfaya götürebiliyorum kullanıcıyı. Bundan sonra uygulama üstünden WebView'a girince eğer gösterdiğim id değerine sahip bir element varsa kod otomatik `inject` ediliyor.
 
@@ -82,11 +82,11 @@ Kullanıcı uygulamayı kapatıp açtığında verileri kaybolmasın diye `redux
 
 Asana üstündeki tüm öncelikli işler bitti. Önemli gördüğüm yeni `task`'lar oluşturdum ve yüksek öncelikli işler başlığı altına madde madde yazdım.
 
-Uygulama için bir icon, splash screen ve logo bulmam gerekiyordu, raw materyalleri eposta ile aldım, gerekli düzenlemeleri yapıp bu materyalleri uygulamaya yedirmem gerekiyor. 
+Uygulama için bir icon, splash screen ve logo bulmam gerekiyordu, raw materyalleri eposta ile aldım, gerekli düzenlemeleri yapıp bu materyalleri uygulamaya yedirmem gerekiyor.
 
 Tüm bunlar dışında şirkette ki Tolga abi sohbet sırasında `Webpack`'in JavaScript vs CSS'de sadece kullandığımız parçaları sayfaya include edebildiğini öğrendim. Webpack nedir duymuştum ancak ben sadece kodu `minify` ve `bundle` ettiğini sanıyordum, meğersem kullanılmayan kodları çıkarma gibi bir işlevi de varmış. Peki bu bzie ne sağlar? jQuery, Bootstrap gibi framework'ler sayfamızı çok ağır hale getirebilir, kullanıcı deneyimi amaçlı sayfanın hızlı yüklenmesini isteriz. Sayfamızı Webpack'ten geçirirsek kullanmadığımız fonksiyonlar ve stiller sayfadan siliniyor.
 
-# Day-09
+## Day-09
 
 Bugün `svg` uzantılı dosyaların react native içine nasıl çağrıldığını ve .svg dosyalarının pdf içinde tutulabildiklerini öğrendim. Photoshop programının tek tıkla .svg çıktı verebildiğini de öğrendim.
 
@@ -96,7 +96,7 @@ Uygulamayı `linter`'a sokup 144 tane linter hatası çözdüm. Projenin klasör
 
 Ufak mantık hataları dışında bir şey kalmadı, API hazırlanmasını bekliyorum.
 
-# Day-10
+## Day-10
 
 Bugün `splash screen` tasarladım ve android'e entegre ettim. Splash screen tasarlamak kolay olur sanıyorum çünkü daha önceleri `expo` kullanırken 3dklık bir işti, react-native'de bu işi 2 saate çıktı, tüm ekranlara uyacak çözünürlükte resim hazırlamak derken 2.30 saate kadar çıktı. Bugün splash screen için native kod yazmak zorunda kaldım, `color.xml`, `string.xml`. `style.xml` gibi dosyalarla android bileşenlerine değişken nasıl yüklenir görmüş oldum. Android de `activity` yapısını gördüm.
 
@@ -106,7 +106,7 @@ Bunun dışında webview üstündeki kokpit login ekranında kullanıcı giriş 
 
 Projeyi react-native `0.59.4`'tan `0.60.4`'a geçirmeye çalıştım. Projede kullandığım bazı kütüphaneler AndroidX desteklemediği için derelme hataları geldi, `jetifier` adında bir programı projeye entegre ederek hataalrdan kurtuldum ancak proje derlense bile telefonda açılmıyordu. Bu sebeple eski sürüme geri döndüm.
 
-# Day-11
+## Day-11
 
 Bugün ilk defa git sunucusuna commit attım. Splash screen sonrası oluşan status bar sorunu vardı, onu çözdüm. Lint-staged aracını yanlış konfigüre etmişim, onu düzelttim. Webview içinde site dışından bir linke tıklandığında telefondaki tarayıcıdan açtırma özelliği ekledim.
 
@@ -114,7 +114,7 @@ Android Lolipop kurup uygulamanın teoride desteklediği en düşük sürümü e
 
 Bugün ayrıca `lottie` adı verilen bir kütüphaneyi entegre ettim, bu kütüphanein amacı `adobe after effects` ile tasarlanan animasyonları uygulamaya yerleştirebilmek. Hata aldığım için kurulumu kaldırmak zorunda kaldım.
 
-# Day-12
+## Day-12
 
 Bugün Kokpit API'ına `POST` isteği atabilmek için `Postman` adında bir yazılımı kullanmaya başladım. POST atarken `body` kısmına data, `header` kısmınada `auth` bilgileri konduğunu öğrendim. API dokümantasyonu yazabilmek için `Swagger` adında bir dokümente aracı kullanıldığını öğrendim. Bugün ilk defa `release` aldım ve uygulamayı `production mode`'unda test ettim, release alırken karşıma çıkan sorunları çözdüm. İnternet yavaşlığında kullanıcı deneyimini arttırmak için loading ekranları tasarladım ve uygulamanın gerekli gördüğüm yerlerine koydum.
 
@@ -124,17 +124,17 @@ Bunun dışında uygulamanın ikonuna `badge` eklemek için araştırma yaptım.
 
 Bugün HTTP kodlarını kediler üstünden anlatan [bu hoş siteyi](https://http.cat/) buldum.
 
-# Day-13
+## Day-13
 
-Bugün PDF uzantılı bir dosyadan vektörel bir grafik çıkardım, bu işi yaparken `inkspace` adlı bir yazılım kullandım. Amacım çıkardığım vektörel resimleri app içinde kullanmaktı ama hatalar yüzünden başarılı olamadım. `Async` işler için bir loading komponenti hazırladım ve appteki `fetch` kullandığım yerlere yerleştirdim. Bugün yazdığım app incelendi ve maddeler şekilde yapılması gereken ve değiştirilmesi gereken şeyler listelendi, aynı gün içinde istenilen şeyleri yerine getirdim. 
+Bugün PDF uzantılı bir dosyadan vektörel bir grafik çıkardım, bu işi yaparken `inkspace` adlı bir yazılım kullandım. Amacım çıkardığım vektörel resimleri app içinde kullanmaktı ama hatalar yüzünden başarılı olamadım. `Async` işler için bir loading komponenti hazırladım ve appteki `fetch` kullandığım yerlere yerleştirdim. Bugün yazdığım app incelendi ve maddeler şekilde yapılması gereken ve değiştirilmesi gereken şeyler listelendi, aynı gün içinde istenilen şeyleri yerine getirdim.
 
 Notification için araştırmalar devam ediyor, Kokpit'in hali hazırda bir notification sistemi olduğu için `best practice` yerine Kokpit'e özel bir notification sistemi düşünülüyor. Notification sisteminin temelde nasıl çalıştığını öğrendim ve altyapıyı nasıl kurmam gerekeceği hakkında bir fikir sahibi oldum.
 
 App'in navigator yapısı tamamen değiştirildi. NavigationService adında ektra bir bölüm vardı o yapıyı kaldırdım ve kodu basitleştirdim.
 
-# Day-14
+## Day-14
 
-Bugün pek kod yazmadım, `docker` nedir ned iğildir, nasıl kullanılır bunları öğrendim. Bunun sebebi kapalı sistemler için uygulamaya `notification server` entegre etmekti. Normalde notification server için Firebase, Google, Apple, Amazon vs. şirketlerin `cloud messaging` servisleri kullanılıyor.
+Bugün pek kod yazmadım, `docker` nedir ne diğildir, nasıl kullanılır bunları öğrendim. Bunun sebebi kapalı sistemler için uygulamaya `notification server` entegre etmekti. Normalde notification server için Firebase, Google, Apple, Amazon vs. şirketlerin `cloud messaging` servisleri kullanılıyor.
 
 Belli başlı notification servisleri:
 
@@ -143,12 +143,20 @@ Belli başlı notification servisleri:
 - `APNS` -> Apple Push Notification Service
 
 
-`docker-compose` adlı bir aracı kullanmayı öğrendim. Docker ile `nginx`, `php-fpm` ve `php`  birlikte bir konteynır olarak ayağa kaldırdım. İlk docker tecrübem bu oldu. `Apache` ie `nginx` arasındaki farkları öğrendim. `Dockerfile` yapısını ve neden kullanıldığını öğrendim. Bunun dışında `docker-compose.yml` dosyalarındaki `volume` yapısını öğrendim ve tüm öğrendiğim şeyleri not aldım. 
+`docker-compose` adlı bir aracı kullanmayı öğrendim. Docker ile `nginx`, `php-fpm` ve `php`  birlikte bir konteynır olarak ayağa kaldırdım. İlk docker tecrübem bu oldu. `Apache` ie `nginx` arasındaki farkları öğrendim. `Dockerfile` yapısını ve neden kullanıldığını öğrendim. Bunun dışında `docker-compose.yml` dosyalarındaki `volume` yapısını öğrendim ve tüm öğrendiğim şeyleri not aldım.
 
-Tüm bunları öğrenmemin seneni `notification server` ayağa kaldırmak olsada sonradan vazgeçildi. Bunun 3 sebebi var; 
+Tüm bunları öğrenmemin sebebi `notification server` ayağa kaldırmak olsada sonradan bundan vazgeçildi. Bunun 3 sebebi var;
 
 - Kokpit'in kendine has bir bildirim sistemi var.
 - Kapalı sistemler ile çalışmamız gerekiyor.
 - Client için yazılmış bir kütüphane local bildirimlere izin veriyor.
 
 QR kod için gerekli olan API hala bitmedi, halen `dummy data` kullanıyorum.
+
+## Day-15
+
+Bugün `git branch` sistemini öğrendim. Aslında konuyu yarım yamalak biliyordum ancak bugün kafama tam oturdu. Özetle, `branch` açınca aslında bulunduğumuz branchin kopyasını oluşturmuş oluyoruz ve `checkout` parametresi ile farklı bir branch'e geçiş yapınca bilgisayarımızda bulunan klasör ve dosyalar git sayesinde aktif branch te ne varsa ona dönüştürülüyor. Bu şekilde `master` branch'ine versiyon adı içeren bir branch açıp onun üstüne `feature` branchi açıp geliştirme yapabiliriz. Git programı `diff` üstünden dosya değişikliğini takip ederek işlem yaptığı için branch açınca dosyamız neredeyse hiç büyümüyor.
+
+Bugün bana geliştirdiğim uygulamanın `manager` uygulaması olduğunu, bu uygulamayı satın alan şirketteki yönetici insanların kullanacağı söylendi. Şimdi ise aynı temelleri paylaşan ve bazı minor ve major değişiklikleri olan `customer` uygulaması geliştirmem isteniyor. Bu sebeple git branch sistemini öğrendim. Uygulamaya customer ve manager olmak üzere 2 branch açtım, master branchi içinde sadece dokümantasyon tutmayı planlıyorum. Uygulama normalde master branch'indeydi ancak şimdi aynı temeli paylaşan 2 farklı uygulamayı tek bir git deposunda tutuyorum artık.
+
+Bugün `sublime text 3` editöründen `atom` editörüne geçiş yaptım. Atom için pluginler kurup geliştirme ortamımı hazırladım. Sublime kadar hızlı bir editör olmasada çok daha gelişkin bir plugin desteği var.
