@@ -160,3 +160,13 @@ Bugün `git branch` sistemini öğrendim. Aslında konuyu yarım yamalak biliyor
 Bugün bana geliştirdiğim uygulamanın `manager` uygulaması olduğunu, bu uygulamayı satın alan şirketteki yönetici insanların kullanacağı söylendi. Şimdi ise aynı temelleri paylaşan ve bazı minor ve major değişiklikleri olan `customer` uygulaması geliştirmem isteniyor. Bu sebeple git branch sistemini öğrendim. Uygulamaya customer ve manager olmak üzere 2 branch açtım, master branchi içinde sadece dokümantasyon tutmayı planlıyorum. Uygulama normalde master branch'indeydi ancak şimdi aynı temeli paylaşan 2 farklı uygulamayı tek bir git deposunda tutuyorum artık.
 
 Bugün `sublime text 3` editöründen `atom` editörüne geçiş yaptım. Atom için pluginler kurup geliştirme ortamımı hazırladım. Sublime kadar hızlı bir editör olmasada çok daha gelişkin bir plugin desteği var.
+
+## Day-16
+
+Bugün tek bir problem için 4-5 saat uğraştım. Karşıma çıkan problem sadece hatanın hangi bileşende olduğunu söylüyordu, hiç bir bilgi vermiyordu bu sebeple tüm kodu debug etmek zorunda kaldım. Sonun hata çözüldü ama basit bir şey için saatlerim gitti.
+
+Her neyse, bugün asana üstünde tanımlanmış ve uzun süredir bekleyen görevi yerine getirdim. `crashlytics`, `fabric.io` ve `apphub` konularını araştırdım. Yazdığım uygulama hangi hataları hangi sistemlerde veriyor vs. takip etmek gerekiyor bu sebeple yazılmış servislere bakındım.
+
+`socket` bazlı Kokpit'e özel bir `push notification server` diagramı çıkardım ve şirketteki yetkili bir elemanla paylaştım. Bunun üstüne kullanacağımız teknolojiyi konuştuk.
+
+Uygulama biteli çok oldu ancak API hala hazırlanıyor. `customer` adında geliştirdiğim ikinci mobil uygulaması ha bitti ha bitecek, bu yeni uygulama için de yeni bir API hazırlanacak. Bir kaç gün öncesinde ETOM'a ait Kokpit'ten farklı bir mobil uygulaması fikri üstüne konuşmuştuk, muhtemelen her şey bitince o projeye başlıcam.
