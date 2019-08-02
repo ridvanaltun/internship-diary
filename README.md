@@ -170,3 +170,17 @@ Her neyse, bugün asana üstünde tanımlanmış ve uzun süredir bekleyen göre
 `socket` bazlı Kokpit'e özel bir `push notification server` diagramı çıkardım ve şirketteki yetkili bir elemanla paylaştım. Bunun üstüne kullanacağımız teknolojiyi konuştuk.
 
 Uygulama biteli çok oldu ancak API hala hazırlanıyor. `customer` adında geliştirdiğim ikinci mobil uygulaması ha bitti ha bitecek, bu yeni uygulama için de yeni bir API hazırlanacak. Bir kaç gün öncesinde ETOM'a ait Kokpit'ten farklı bir mobil uygulaması fikri üstüne konuşmuştuk, muhtemelen her şey bitince o projeye başlıcam.
+
+## Day-17
+
+Kokpit Mobile için doküman çıkarmayı planladık. Öncelikle uygulamayı tanımlayan bir doküman yazılacak. Daha sonra teknik doküman çıkartılıp gerekli teknolojiler belirlenecek en sonunda `iş planı` hazırlanıp tarihler belirlenecek.
+
+Uygulamayı geliştirmeye başladığım günden beri dinamik bir şekilde değişiyor. Bazı zamanlar major değişimler isteniyor. Bu sebeple uygulamayı dokümante etmek şart oldu.
+
+Bugün `kokpit customer` uygulamasını ayağa kaldırana kadar çıkan hataları çözdüm. Bu uygulamada başlar başlamaz bitti ancak bu uygulama için de iş planı gerekiyor. API hazırlanana kadar boş durmamak için geliştirdim ve bugün geliştirmesini bıraktım, eğer ETOM'dan istek gelirse verdikleri doküman doğrultusunda geliştirmeye devam edicem.
+
+`customer` uygulaması için `kiosk mode` denen bir şeyi entegre etmem gerekiyor. Kullanıcı sadece uygulama ile etkileşime girebilmeli, hiç bir şekilde uygulamayı kapatamamalı hatta telefon açılırken uygulama otomatik olarak başlamalı. Bu işi çözmek için internette araştırmalar yaptım ve native kod yazmam gerektiğini öğrendim. İş planı ve teknik doküman çıkarılmadığı için `kiosk mode` entegre etme işine ara verdim.
+
+Bugün kodu daha okunabilir kılmak için düzelttim. Üstüne daha fazla kod yazamıyorum çünkü bana bu yönde istek gelmesi gerekiyor.
+
+Herneyse, atom editörünü aktif kullanmaya başladım ve bir sürü paket yükledim. Çok garip bir şekilde sublime'da olmayan bir çok özellik atom için yazılmış.
