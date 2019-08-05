@@ -184,3 +184,15 @@ Bugün `kokpit customer` uygulamasını ayağa kaldırana kadar çıkan hatalar�
 Bugün kodu daha okunabilir kılmak için düzelttim. Üstüne daha fazla kod yazamıyorum çünkü bana bu yönde istek gelmesi gerekiyor.
 
 Herneyse, atom editörünü aktif kullanmaya başladım ve bir sürü paket yükledim. Çok garip bir şekilde sublime'da olmayan bir çok özellik atom için yazılmış.
+
+## Day-18
+
+Bugün `token` işi süpriz bir şekilde tamamlandı. WebView elementine `fetch` fonksiyonu içeren bir javascript kodu gömerek `token` elde edebiliyorum. Artık token elde edebildiğim için kullanıcı adı şifre olmadan `API`'ya istekler atabiliyorum. İleride eklemeyi planladığımız bildirim sistemi içinde bu token kullanılacak.
+
+`JWT` denen `auth` stratejisini araştırıp öğrendim. Projede kullanmak için araştırmıştım ancak token işi zaten çözüldü. `Levenshtein Distance` adında bir algoritmanın varlığını öğrendim ve bununla ilgili olarak `elasticsearch` nedir ne değildir nerelerde kullanılır öğrendim.
+
+Beş gündür üstüne parça parça uğraştığım `lottie` entegrasyonunu bugün başardım. Artık `Adobe After Effects` ile hazırlanmış animasyonları mobil uygulamada kullanmak üzere `export` alabiliyoruz. Bu işlem için `Adobe AE`'ye `Bodymovin` adında bir eklenti yüklememiz gerekiyor, export alma işlemi çok basit.
+
+`Firebase`'i entegre ettim ve artık `Firebase API`'larını uygulama içinde kullanabilir hale geldim. Bunun üstüne `Crashlytics` servisini entegre ettim ve artık uygulama çökünce çökme raporları Firebase üstündeki crashlytics paneline geliyor. Bu şekilde artık sık sık gelen hataları görüp uygulama içinde gereken düzeltmeleri sağlayabiliriz.
+
+`Firebase` entegrasyonu için `react-native` paketini `0.59.10` dan `0.64`'e yükseltmek zorunda kaldım. Önceden de denemiştim bunu ancak başarılı olamamıştım. Bazı major değişiklikler olduğu için kod patladı ancak tane tane tüm sorunları çözerek entegre ettim ve native kodu okuma yeteneğim gelişti diyebilirim, artık gözüme daha az korkunç geliyor. Bu yükseltme işi sayesinde `lottie`'yi entegre edebildim zaten. 
