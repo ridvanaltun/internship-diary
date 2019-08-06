@@ -196,3 +196,11 @@ Beş gündür üstüne parça parça uğraştığım `lottie` entegrasyonunu bug
 `Firebase`'i entegre ettim ve artık `Firebase API`'larını uygulama içinde kullanabilir hale geldim. Bunun üstüne `Crashlytics` servisini entegre ettim ve artık uygulama çökünce çökme raporları Firebase üstündeki crashlytics paneline geliyor. Bu şekilde artık sık sık gelen hataları görüp uygulama içinde gereken düzeltmeleri sağlayabiliriz.
 
 `Firebase` entegrasyonu için `react-native` paketini `0.59.10` dan `0.64`'e yükseltmek zorunda kaldım. Önceden de denemiştim bunu ancak başarılı olamamıştım. Bazı major değişiklikler olduğu için kod patladı ancak tane tane tüm sorunları çözerek entegre ettim ve native kodu okuma yeteneğim gelişti diyebilirim, artık gözüme daha az korkunç geliyor. Bu yükseltme işi sayesinde `lottie`'yi entegre edebildim zaten. 
+
+## Day-19
+
+`Crashlytics Beta` adlı bir servise başvuru yaptım, bu servis `Firebase Alpha` programında ve başvuru yapıyoruz kullanabilmek için, eğer başvurumuzu kabül ederlerse kullanabiliyoruz. Bugün başvuru yaptım ve yanıt bekliyorum. Bu servis ile test işlemleri kolaylaşıyor, şöyle ki uygulamanın yeni sürümünü anında test kullanıcılarına gönderebiliyorum, marketten indirmelerine yada manuel yollarla apk indirmelerine gerek kalmıyor.
+
+Kokpit'ten `token` almam gerekiyordu çünkü token'ı kullanarak işlem yapabiliyorum, sorun şu ki `postman` kullanarak token alamıyordum çünkü kullanıcının önceden giriş yapmış olması gerekiyordu ve `postman` tarayıcıdan bağımsız olarak yürüyor. Benim düşümcem, normalde login sistemi için API yazılması ve webview üstünden giriş iptal edimesi. Native yollarla giriş yapmak ve token almak. Bu yol zahmetli olduğu için `workaround` kullanmıştık. Her neyse, tarayıcıdan çalıştığımızda token alabiliyorduk ancak `POST` işlemi yaparken sıkıntı çekiyorduk çünkü bu işi yapacak -siteye özel post atma- bir araç yok. Neyse ki bu problemi `chrome dev tools` içindeki konsola `fetch` fonksiyonu yazarak çözebildik.
+
+Dün liste şeklinde verilen şeyleri yapmaya başladım, yeni bir şey pek öğrenmedim. 
