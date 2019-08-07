@@ -204,3 +204,13 @@ Beş gündür üstüne parça parça uğraştığım `lottie` entegrasyonunu bug
 Kokpit'ten `token` almam gerekiyordu çünkü token'ı kullanarak işlem yapabiliyorum, sorun şu ki `postman` kullanarak token alamıyordum çünkü kullanıcının önceden giriş yapmış olması gerekiyordu ve `postman` tarayıcıdan bağımsız olarak yürüyor. Benim düşümcem, normalde login sistemi için API yazılması ve webview üstünden giriş iptal edimesi. Native yollarla giriş yapmak ve token almak. Bu yol zahmetli olduğu için `workaround` kullanmıştık. Her neyse, tarayıcıdan çalıştığımızda token alabiliyorduk ancak `POST` işlemi yaparken sıkıntı çekiyorduk çünkü bu işi yapacak -siteye özel post atma- bir araç yok. Neyse ki bu problemi `chrome dev tools` içindeki konsola `fetch` fonksiyonu yazarak çözebildik.
 
 Dün liste şeklinde verilen şeyleri yapmaya başladım, yeni bir şey pek öğrenmedim. 
+
+## Day-20
+
+Bugün lokasyon özelliği eklemeye çalıştım. React Native'in bize `geolocation` adında sunduğu bir kütüphane var ancak bu kütüphaneyi resmi kaynak önermiyor çünkü tüm kullanıcılar uygulama geliştirebilsin diye farklı bir şekilde geliştirilmiş. Örneğin Çin'deki kullanıcıların telefonunda `Google Play Store` yok, normalde geolocation için google play servisi üstünden çalışıyoruz ancak dediğim gibi bu sefer telefonunda Play Store olmayan'lar bundan yararlanamaz. Ayrıca eski bir Play Stroe varsa elimizde yine bundan yararlanamıyoruz bu sebeple farklı bir şekilde geliştirilmiş uygulama ve yavaş olduğu söyleniyor.
+
+`Geolocation` nedir ne değildir bugün bunu öğrenme fırsatım oldu. Normalde uydu verileri ile konum tespiti yaparken bu teknikle internete bağlı diğer cihazların verileri, IP adresi bazlı vs. ile arkada dönen bir hesapla konumumuz tespit edilebiliyor.
+
+`Fine Location` diye bir şey öğrendim, normalde her uygulama 100% doğrulukta yer tespine ihtiyaç duymuyor, sadece bulunduğumuz ilçe yetebiliyor mesela uygulama için. Konumumuzu eğer uygulamayı yazan kişi izin vermişse bulanık gösterebiliyoruz. Eğe yüksek derecede doğruluk istiyorsak `Fine Location` denen izinle lokasyon izni alıyoruz.
+
+Bügün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri oturduğu için ve istekler sepesifik hale geldiği için öğrenmekten çok algoritma geliştirmeye ve proje yapısını yeni özelliklere uygun hale getirmeye ayırıyorum zamanımı.
