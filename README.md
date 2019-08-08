@@ -214,3 +214,9 @@ Bugün lokasyon özelliği eklemeye çalıştım. React Native'in bize `geolocat
 `Fine Location` diye bir şey öğrendim, normalde her uygulama 100% doğrulukta yer tespine ihtiyaç duymuyor, sadece bulunduğumuz ilçe yetebiliyor mesela uygulama için. Konumumuzu eğer uygulamayı yazan kişi izin vermişse bulanık gösterebiliyoruz. Eğe yüksek derecede doğruluk istiyorsak `Fine Location` denen izinle lokasyon izni alıyoruz.
 
 Bügün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri oturduğu için ve istekler sepesifik hale geldiği için öğrenmekten çok algoritma geliştirmeye ve proje yapısını yeni özelliklere uygun hale getirmeye ayırıyorum zamanımı.
+
+## Day-21
+
+Bugün elimdeki tüm işleri bitirdim, sadece bildirim sistemi kaldı ki onun API'ı 1 saat içinde yazıldı. Günün son dakikalarında kritik bir bug çıktı, onu yarın çözücem. Bildirim sistemi üstünde test amaçlı kod yazmıştım o yüzden kısa bir süre içinde implemente etmeyi planlıyorum. 
+
+Elimdeki liste bitince muhtemelen yeni bir projeye başlıcam.
