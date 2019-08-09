@@ -228,3 +228,5 @@ Bugün dünden kalan kritik bir hatayı çözdüm. Bunun üstüne kod yazamadım
 `FontAwesome 4` ile `FontAwesome 5` arasındaki farkı öğrendim. 4. versiyonda `fa` kullanıyoruz, 5. versiyonda ikon tipine göre yani solid etiketli bir ikonsa `fas` vs. şeklinde kullanılıyor.
 
 Bugünkü planım bildirim sistemini bitirmekti ama çıkan hata yüzünden kod yazmaya fırsat bulamadım.
+
+Bugün ayrıca `Atom`'un yavaşlığından bıkıp `VSCode`'a geçtim.
