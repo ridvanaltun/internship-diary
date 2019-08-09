@@ -220,3 +220,11 @@ Bügün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri 
 Bugün elimdeki tüm işleri bitirdim, sadece bildirim sistemi kaldı ki onun API'ı 1 saat içinde yazıldı. Günün son dakikalarında kritik bir bug çıktı, onu yarın çözücem. Bildirim sistemi üstünde test amaçlı kod yazmıştım o yüzden kısa bir süre içinde implemente etmeyi planlıyorum. 
 
 Elimdeki liste bitince muhtemelen yeni bir projeye başlıcam.
+
+## Day-22
+
+Bugün dünden kalan kritik bir hatayı çözdüm. Bunun üstüne kod yazamadım çünkü Android Release alırken hata alıyordum ve hatayı debug etmem ve çözmem gerekti. `CI` aracı kullansaydım böyle bir hatayı erken tespit edip gerektiği zaman müdahele edebilirdim ancak `CI` entegrasyonu olmadığı için git üstünden test branch'i açarak eski commitlere gitmem gerekti. Tüm günümü bu hataya ayırdığım için `CI` entegrasyonu yapmaya karar verdim ve temellerini öğrenmeye başladım. Şirkette `GitLab` kullanıyoruz ve GitLab'a gömülü olarak `GitLab CI/CD Runner` aracı geliyor. Yani `travis`, `jenkins` gibi ekstra bir servis kullanmamıza gerek yok tek bir çatı altında hem git deposu hem CI aracımız var. GitLab'ın CI aracını öğrenmeye başladım ve yakında projeye entegre edeceğim.
+
+`FontAwesome 4` ile `FontAwesome 5` arasındaki farkı öğrendim. 4. versiyonda `fa` kullanıyoruz, 5. versiyonda ikon tipine göre yani solid etiketli bir ikonsa `fas` vs. şeklinde kullanılıyor.
+
+Bugünkü planım bildirim sistemini bitirmekti ama çıkan hata yüzünden kod yazmaya fırsat bulamadım.
