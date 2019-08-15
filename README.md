@@ -213,7 +213,7 @@ Bugün lokasyon özelliği eklemeye çalıştım. React Native'in bize `geolocat
 
 `Fine Location` diye bir şey öğrendim, normalde her uygulama 100% doğrulukta yer tespine ihtiyaç duymuyor, sadece bulunduğumuz ilçe yetebiliyor mesela uygulama için. Konumumuzu eğer uygulamayı yazan kişi izin vermişse bulanık gösterebiliyoruz. Eğe yüksek derecede doğruluk istiyorsak `Fine Location` denen izinle lokasyon izni alıyoruz.
 
-Bügün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri oturduğu için ve istekler sepesifik hale geldiği için öğrenmekten çok algoritma geliştirmeye ve proje yapısını yeni özelliklere uygun hale getirmeye ayırıyorum zamanımı.
+Bügün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri oturduğu için ve istekler spesifik hale geldiği için öğrenmekten çok algoritma geliştirmeye ve proje yapısını yeni özelliklere uygun hale getirmeye ayırıyorum zamanımı.
 
 ## Day-21
 
@@ -230,3 +230,21 @@ Bugün dünden kalan kritik bir hatayı çözdüm. Bunun üstüne kod yazamadım
 Bugünkü planım bildirim sistemini bitirmekti ama çıkan hata yüzünden kod yazmaya fırsat bulamadım.
 
 Bugün ayrıca `Atom`'un yavaşlığından bıkıp `VSCode`'a geçtim.
+
+## Day-23
+
+Android'de çıkan hatayı erkenden çözdüm. Htanın sebebi bundle dosyasını derleme esnasında oluşturmaması. Bu sebeple runtime error alıyorduk. Çözüm için bir `NPM script` yazdım ve derleme yaparken ilk adım olarak artık farklı bir komutla bundle oluşturup ardından derleme işine geçiyor.
+
+`VSCode`'a alıştım. Sol tarafta dikey bir menü olması garibime gidiyor sadece. Sublime Text, VSCode yanıdna `Zen Mode`'u açılmış gibi bir havası var. Sublime Text ile yazı yazmak halen daha zevkli. İleride VSCode'u Sublime Text kadar yalın bir şekle sokmak istiyorum. Sadece ihtiyacım olduğunda sol dikey menü önümde olmalı mesela.
+
+Bildirim sistemini implemente etmeye çalışırken android hakkında çok şey öğrendim. Normalde bildirim sistemi kurarken hali hazırda bu işi yapan bir servis kullanılır `FCM` vs. Biz API yazıp bunun üstünden halletmek istiyoruz çünkü Kokpit'in kendine has bazı `case`'leri var. Benim arka planda sürekli olarak gelen yeni bildirimleri takip etmem ve gelince `local` olarak bildirim oluşturmam gerekiyor. Uygulama arka plana atıldığında yada kapatıldığında yine de çalışması gerekiyor, yani bu durumda Android için `service` ve IOS için `Background Task` yazmam gerekiyor.
+
+IOS pil tüketimini kısmak için bize en az 15dk da bir arka planda kod çalıştırmamıza izin veriyor ve maksimum 30 saniye boyunca kod çalıştırabiliyoruz. Ayrıca IOS arka planda task çalıştırma konusunda tam bir kara kutu. Diğer geliştiricilerin tahminine göre arka planda bir `machine learning` algoritması var. IOS, arka planda çalışmasını istediğimiz kodu ne zaman çalıştıracağını kullanıcının uygulamayı kullanma alışkanlığına göre kendi belirliyor. Yani biz minimum 15dk ayarlasak bile mesela uygulamayı ilk defa test amaçlı olsa bile telefona yüklediğimizde arka planda çalışmasını istediğimiz kod bir sonraki güne kadar çalıştırılmayabilir.
+
+Android için böyle bir durum yok ancak arka planda kod çalıştırma implementasyonu zor. Öncelikle yazdığımız uygulama ile Android servisinin iletişim kurabiliyor olması lazım, buna köprü kurmak deniyor ve React-Native bu iş için `HeadlessJS` adında bir şey üretmiş. Android'de native kod yazan biri değilseniz implemente etmek çok zorlaşıyor zira ne resmi doküman nede diğer kaynaklar bu teknolojiyi dokümente etmemiş. Bugün 5 saatimi bunu implemente ederek harcadım ama başarısız oldum. Bu sebeple yöntemimi değiştirmeye karar verdim, `react-native-background-fetch` adında bir kütüphaneye geçtim, belki ileride `HeadlessJS` ile tekrar şansımı denerim.
+
+`Gitlab CI/CD Runner`'ı implemente ettim ancak her commit sonrası uzun bir pending kısmına giriyor ve en sonudna fail veriyor, bunun sebebi de android'i derleyebilmek için çok fazla kaynağa ihticımız olması. Kendi bilgisayarımda deploy amaçlı build almak sitediğim zaman ortalama 11-12dk sürüyor mesela. Problemi çözmek için manuel olarak GitLab server yöneticisinin projeye kaynak ayırması gerekiyor ki işlem hızlı yapılabilsin ve timeout'a düşüp fail vermesin.
+
+Geri tuşuna basınca WebScreen üstünde eğer geri gidebiliyorsak geri giden, gidemiyorsak uygulamadan çıkan bir yapı koydum çünkü kullanıcılar geri tuşuna basınca uygulamadan istemeden de olsa yanlışlıkla çıkıyordu. Kullanıcı deneyimi bu şekilde artmış oldu.
+
+Yarın background task işlemini bitirmeyi planlıyorum.
