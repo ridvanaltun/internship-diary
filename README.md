@@ -248,3 +248,21 @@ Android için böyle bir durum yok ancak arka planda kod çalıştırma implemen
 Geri tuşuna basınca WebScreen üstünde eğer geri gidebiliyorsak geri giden, gidemiyorsak uygulamadan çıkan bir yapı koydum çünkü kullanıcılar geri tuşuna basınca uygulamadan istemeden de olsa yanlışlıkla çıkıyordu. Kullanıcı deneyimi bu şekilde artmış oldu.
 
 Yarın background task işlemini bitirmeyi planlıyorum.
+
+## Day-24
+
+Background Task işlemi bitti ancak içine API'ı yerleştiremedim çünkü API'da bazı hatalar vardı ve gün sonunda çözülebildi. Bildirim sistemini 5 gün sonrasına kadar bir bitirme sürem var, 5 gün sonrasında ufak yerleri düzeltip sonraki günde test ve `Google Play Store`'a yüklemeyi düşünüyoruz.
+
+GitLab CI/CD entegrasyonu bugün yapıldı. Tüm sistemi bugün anladım. Projemiz için bir `task runner` oluşturmamız gerekiyor, bir token üstünden GitLab'a bunu bağlıyoruz. Tüm CI operasyonu task runner kurduğumuz sunucu üstünden gerçekleşiyor. Birden fazla task runner sunucusu kurup CI işlemini hızlandırmamız mümkün. Bunun için tabi paralel çalışabilecek job'lar yazmamız gerekiyor. Örneğin üstüne çalıştığım projede Android ve IOS için paralel bir şekilde derleme ve deploy işlemi gerçekleşebilir. 30dk sunucuyu meşgul etmek yerine 15dk-15dk ayrı sunucularda paralel bir şekilde işlemleri yaptırabiliriz.
+
+Eskiden -2005 civarı- Apple, `macOS Server` adında bir ürün çıkarmış -Windows Server gibi- ama başarısız olmuş. IOS uygulamasını derleyebilmem için macOS bir bilgisayara ihtiyacım var bu sebeple araştırma yaptım.
+
+CI için hazırladığım konfigüreasyon dosyasında bir çok mantık hatası vardı, projeye task runner atayınca hataları görme şansım oldu çünkü pending modundan çıkıp hazırladığım konfigürasyon dosyası çalıştırıldı ve adım adım izledim ne olup ne bitiyor diye. Bulduğum çoğu hatayı düzelttim ancak daha bitiremedim.
+
+Bugün `Google Cloud` üstündeki açabileceğimiz disk yapılarını gördüm, `Coldline`, `Region`, `Multi-Region` vs. Bunun üstüne `arthifacts server` adında derlediğimiz veya bir işlem sonucu ortaya çıkan uygulamaları sürümüne göre arşivleyen servisler olduğunu öğrendim.
+
+Uygulamyı daha önce tablet üstünde denemiştik, tablet üstünde denerken bir kaç stil hatası çıktı, bugün ufak tefek bazı stil hatalarını çözdüm ancak o da bitmedi. Bildirim sistemi bitince stil hatalarını bitirip Google Play için hazır hale getirmek istiyorum.
+
+Bugün fetch sonrası ezbere çalıştırdığım `response.json()` komutunun aslında ne olduğunu öğrendim. Normalde response alırken response nesnesi içinde json adında bir fonksiyon var, yani dönen cevabın içindeki fonksiyonu çalıştırıyoruz ve bize body üstünden iletilen json verisini döndürüyor. response içinde fonksiyon göndermesi çok garibime gitti açıkçası.
+
+Günün sonlarında `Git Stash` denen naneyi öğrendim. Normalde çalıştığım branch üstünde commit'lenmemiş dosyalar varsa başka branch üstüne geçemiyoruz. Hatta push yapamıyoruz. Bu durumda değişiklik yapılmış dosyaları bir stash içine alıp diğer işlemlerimizi yapabiliyoruz. Sonrasında stash içindeki değişiklikleri uygula diyerek geri döndürüyoruz. `Stash`'in türkçe karşılığı zaten saklamak.
