@@ -266,3 +266,24 @@ Uygulamyı daha önce tablet üstünde denemiştik, tablet üstünde denerken bi
 Bugün fetch sonrası ezbere çalıştırdığım `response.json()` komutunun aslında ne olduğunu öğrendim. Normalde response alırken response nesnesi içinde json adında bir fonksiyon var, yani dönen cevabın içindeki fonksiyonu çalıştırıyoruz ve bize body üstünden iletilen json verisini döndürüyor. response içinde fonksiyon göndermesi çok garibime gitti açıkçası.
 
 Günün sonlarında `Git Stash` denen naneyi öğrendim. Normalde çalıştığım branch üstünde commit'lenmemiş dosyalar varsa başka branch üstüne geçemiyoruz. Hatta push yapamıyoruz. Bu durumda değişiklik yapılmış dosyaları bir stash içine alıp diğer işlemlerimizi yapabiliyoruz. Sonrasında stash içindeki değişiklikleri uygula diyerek geri döndürüyoruz. `Stash`'in türkçe karşılığı zaten saklamak.
+
+## Day-25, 26 & 27
+
+Bildirim sistem bitti. `Google Play Console` hesabı açtık ve uygulamayı incelenmek üzere gönderdik, incelme işi bitince Play Store'da yayınlanacak. Yayınlama işini ben üstlendim ve android için uygulama yayınlarken ne yapılır öğrenmiş oldum. Uygulamada ufak stil hataları dışında bir şey kalmadı. `MVP` sürümü çıkardık artık müşteriye sunulabilir. Bundan sonra geri bildirimlerle ekstra özellikler eklenecek.
+
+Tüç işlerim bittiği için asana'da duran bir özelliği geliştirmeye başladım. Manuel ürün ekleme özelliği, qr kod okunamaz bir haldeyse ürün kodunu elle girerek ürün ekleyebilmeyi sağlayacak. Bu özelliğin temelini yazdım kalan kısmını yarın bitirmeyi düşünüyorum.
+
+Uygulamayı sürüm adı vermeyi öğrendim.
+
+- Prototype
+- POC (proof of concept)
+- MVC (minimum viable product)
+- Alpha
+- Beta
+- Launch 
+
+İlk başta bir prototip çıkartılıyor, UX tasarımı vs her şey burada belirleniyor. POC ile testler yapılıyor ve hangi teknolojiler seçilecek bu özellik olur mu olmaz mı diye yazmaya başlıyoruz, elimizdeki veriler hardcoded olmalı API beklememize gerek yok. Sonrasında tüm olmasa da olur özellikleri eleyip (push notification vs) MVC sürümü çıkartıyoruz, bu sürümde elimizdeki datalar API ve hardcoded olmak üzere iki şekilde de olabilir. Sonrasında alpha sürümünde temel şeyleri geliştiriyoruz, bu sürüm halen kullanıcıya sunulacak yapıda değil, ekip içi uygulamayı test edip geri dönüşlerle geliştirme yapılıyor. Beta'ya geçince daha az `breaking change` yapacağımız için hedef kullanıcı kitlesine beta sürümü altında dağıtabiiyoruz, hedef kullanıcılardan aldığımız dönüşlerle uygulamayı şekillendiriyoruz. Beta sürümün bir yararı, erken hata tespiti, ullanıcıalrın uygulamaları crash oldukça elimize gelen hata raporları ile ileride çok büyük dert olacak sorunları burada çözebiliyoruz. En sonunda hedeflerdiğimiz prototipe ulaşınca launch sürümü çıkıyor ve uygulamanın sürümü 1.0.0 artık.
+
+Bundan sonra şirket içinde yapacağım uygulamalara bu şekilde geliştirmeye özen göstericem. Hatta ve hatta bu semantik versiyonlama hakkında bana yardımcı olabilecek araçları araştırmaya başladım. Yakında projeye dahil edip otomatik sürüm numarası verme gibi şeyler eklemeyi düşünüyorum.
+
+Proje rayına oturduğu için öğrendiğim pek bir şey yok, artık major değişiklikler yerine minor ve patch yazıyorum genellikle. Bu sebeple anlatacak bir şey çıkmıyor.
