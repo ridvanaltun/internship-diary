@@ -92,19 +92,19 @@ Bugün `svg` uzantılı dosyaların react native içine nasıl çağrıldığın
 
 Üstüne çalıştığım uygulama için icon ve logo hazırladım, gelecek gün `splash screen` hazırlamayı planlıyorum. Bunlar dışında gerekli API'lar hazır olmadığı için uygulama içinde bazı bug ve mantık hatalarını düzelttim sadece. Kullanıcının bilgileri. API'ye post atabilmek için `sessionid` denen bir değere sahip olmam gerekiyor, bu değeri kullanıcı webview ile giriş yaptıktan sonra cookie bilgisini çekerek elde ediyorum. Sessionid ile kullanıcı post atabileceği için kokpit'e kolayca auth işlemleri için API yazılabilir, elimdeki işi bitirince bu konuyu açıp ileride uygulamanın login olma kısmını implemente edebilirim.
 
-Uygulamayı `linter`'a sokup 144 tane linter hatası çözdüm. Projenin klasör yapısını ufak ta olsa değiştirdim. Önceden kulay kullanım amaçlı parçaladığım bir kaç dosyayı tek çatı altında birleştirdim çünkü ayrı kullanmak işimi kolaylaştırmak yerine zorlaştırıyordu.
+Uygulamayı `linter`'a sokup 144 tane linter hatası çözdüm. Projenin klasör yapısını ufak ta olsa değiştirdim. Önceden kolay kullanım amaçlı parçaladığım bir kaç dosyayı tek çatı altında birleştirdim çünkü ayrı kullanmak işimi kolaylaştırmak yerine zorlaştırıyordu.
 
 Ufak mantık hataları dışında bir şey kalmadı, API hazırlanmasını bekliyorum.
 
 ## Day-10
 
-Bugün `splash screen` tasarladım ve android'e entegre ettim. Splash screen tasarlamak kolay olur sanıyorum çünkü daha önceleri `expo` kullanırken 3dklık bir işti, react-native'de bu işi 2 saate çıktı, tüm ekranlara uyacak çözünürlükte resim hazırlamak derken 2.30 saate kadar çıktı. Bugün splash screen için native kod yazmak zorunda kaldım, `color.xml`, `string.xml`. `style.xml` gibi dosyalarla android bileşenlerine değişken nasıl yüklenir görmüş oldum. Android de `activity` yapısını gördüm.
+Bugün `splash screen` tasarladım ve android'e entegre ettim. Splash screen tasarlamak kolay olur sanıyorum çünkü daha önceleri `expo` kullanırken 3dklık bir işti, react-native'de bu işi 2 saate çıktı, tüm ekranlara uyacak çözünürlükte resim hazırlamak derken 2.30 saate kadar çıktı. Bugün splash screen için native kod yazmak zorunda kaldım, `color.xml`, `string.xml`. `style.xml` gibi dosyalarla android bileşenlerine değişken nasıl yüklenir görmüş oldum. Android'de `activity` yapısını gördüm.
 
 `react-native-cookies` bağımlılığını projeden kaldırdım çünkü kütüphanenin `maintainer`'ı yok. Geliştirilmesi bırakılmış ve derlerken ufak ta olsa bir kaç uyarı mesajı veriyor. Bu kütüphane yerine Webview'a cookie döndüren bir javascript kodu yazdım ve dönen sonucu işleyip obje haline getirecek bir fonksiyon yazdım.
 
 Bunun dışında webview üstündeki kokpit login ekranında kullanıcı giriş yaparken normalde dil seçiyor ve ona göre giriş yapıyor. Çoklu dil desteğini login ekranındaki dil seçim yapısına entegre ettim. Artık kişi login olurken seçtiği dil ile uygulamayı kullanabiliyor.
 
-Projeyi react-native `0.59.4`'tan `0.60.4`'a geçirmeye çalıştım. Projede kullandığım bazı kütüphaneler AndroidX desteklemediği için derelme hataları geldi, `jetifier` adında bir programı projeye entegre ederek hataalrdan kurtuldum ancak proje derlense bile telefonda açılmıyordu. Bu sebeple eski sürüme geri döndüm.
+Projeyi react-native `0.59.4`'tan `0.60.4`'a geçirmeye çalıştım. Projede kullandığım bazı kütüphaneler AndroidX desteklemediği için derleme hataları geldi, `jetifier` adında bir programı projeye entegre ederek hatalardan kurtuldum ancak proje derlense bile telefonda açılmıyordu. Bu sebeple eski sürüme geri döndüm.
 
 ## Day-11
 
@@ -165,7 +165,7 @@ Bugün `sublime text 3` editöründen `atom` editörüne geçiş yaptım. Atom i
 
 Bugün tek bir problem için 4-5 saat uğraştım. Karşıma çıkan problem sadece hatanın hangi bileşende olduğunu söylüyordu, hiç bir bilgi vermiyordu bu sebeple tüm kodu debug etmek zorunda kaldım. Sonun hata çözüldü ama basit bir şey için saatlerim gitti.
 
-Her neyse, bugün asana üstünde tanımlanmış ve uzun süredir bekleyen görevi yerine getirdim. `crashlytics`, `fabric.io` ve `apphub` konularını araştırdım. Yazdığım uygulama hangi hataları hangi sistemlerde veriyor vs. takip etmek gerekiyor bu sebeple yazılmış servislere bakındım.
+Her neyse, bugün Asana üstünde tanımlanmış ve uzun süredir bekleyen görevi yerine getirdim. `crashlytics`, `fabric.io` ve `apphub` konularını araştırdım. Yazdığım uygulama hangi hataları hangi sistemlerde veriyor vs. takip etmek gerekiyor bu sebeple yazılmış servislere bakındım.
 
 `socket` bazlı Kokpit'e özel bir `push notification server` diagramı çıkardım ve şirketteki yetkili bir elemanla paylaştım. Bunun üstüne kullanacağımız teknolojiyi konuştuk.
 
@@ -207,13 +207,13 @@ Dün liste şeklinde verilen şeyleri yapmaya başladım, yeni bir şey pek öğ
 
 ## Day-20
 
-Bugün lokasyon özelliği eklemeye çalıştım. React Native'in bize `geolocation` adında sunduğu bir kütüphane var ancak bu kütüphaneyi resmi kaynak önermiyor çünkü tüm kullanıcılar uygulama geliştirebilsin diye farklı bir şekilde geliştirilmiş. Örneğin Çin'deki kullanıcıların telefonunda `Google Play Store` yok, normalde geolocation için google play servisi üstünden çalışıyoruz ancak dediğim gibi bu sefer telefonunda Play Store olmayan'lar bundan yararlanamaz. Ayrıca eski bir Play Stroe varsa elimizde yine bundan yararlanamıyoruz bu sebeple farklı bir şekilde geliştirilmiş uygulama ve yavaş olduğu söyleniyor.
+Bugün lokasyon özelliği eklemeye çalıştım. React Native'in bize `geolocation` adında sunduğu bir kütüphane var ancak bu kütüphaneyi resmi kaynak önermiyor çünkü tüm kullanıcılar uygulama geliştirebilsin diye farklı bir şekilde geliştirilmiş. Örneğin Çin'deki kullanıcıların telefonunda `Google Play Store` yok, normalde geolocation için google play servisi üstünden çalışıyoruz ancak dediğim gibi bu sefer telefonunda Play Store olmayan'lar bundan yararlanamaz. Ayrıca eski bir Play Store varsa elimizde yine bundan yararlanamıyoruz bu sebeple farklı bir şekilde geliştirilmiş uygulama ve yavaş olduğu söyleniyor.
 
 `Geolocation` nedir ne değildir bugün bunu öğrenme fırsatım oldu. Normalde uydu verileri ile konum tespiti yaparken bu teknikle internete bağlı diğer cihazların verileri, IP adresi bazlı vs. ile arkada dönen bir hesapla konumumuz tespit edilebiliyor.
 
 `Fine Location` diye bir şey öğrendim, normalde her uygulama 100% doğrulukta yer tespine ihtiyaç duymuyor, sadece bulunduğumuz ilçe yetebiliyor mesela uygulama için. Konumumuzu eğer uygulamayı yazan kişi izin vermişse bulanık gösterebiliyoruz. Eğe yüksek derecede doğruluk istiyorsak `Fine Location` denen izinle lokasyon izni alıyoruz.
 
-Bügün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri oturduğu için ve istekler spesifik hale geldiği için öğrenmekten çok algoritma geliştirmeye ve proje yapısını yeni özelliklere uygun hale getirmeye ayırıyorum zamanımı.
+Bugün yine rutin olarak listemdeki özellikleri geliştirdim. Proje temelleri oturduğu için ve istekler spesifik hale geldiği için öğrenmekten çok algoritma geliştirmeye ve proje yapısını yeni özelliklere uygun hale getirmeye ayırıyorum zamanımı.
 
 ## Day-21
 
@@ -223,17 +223,17 @@ Elimdeki liste bitince muhtemelen yeni bir projeye başlıcam.
 
 ## Day-22
 
-Bugün dünden kalan kritik bir hatayı çözdüm. Bunun üstüne kod yazamadım çünkü Android Release alırken hata alıyordum ve hatayı debug etmem ve çözmem gerekti. `CI` aracı kullansaydım böyle bir hatayı erken tespit edip gerektiği zaman müdahele edebilirdim ancak `CI` entegrasyonu olmadığı için git üstünden test branch'i açarak eski commitlere gitmem gerekti. Tüm günümü bu hataya ayırdığım için `CI` entegrasyonu yapmaya karar verdim ve temellerini öğrenmeye başladım. Şirkette `GitLab` kullanıyoruz ve GitLab'a gömülü olarak `GitLab CI/CD Runner` aracı geliyor. Yani `travis`, `jenkins` gibi ekstra bir servis kullanmamıza gerek yok tek bir çatı altında hem git deposu hem CI aracımız var. GitLab'ın CI aracını öğrenmeye başladım ve yakında projeye entegre edeceğim.
+Bugün dünden kalan kritik bir hatayı çözdüm. Bunun üstüne kod yazamadım çünkü Android Release alırken hata alıyordum ve hatayı debug etmem ve çözmem gerekti. `CI` aracı kullansaydım böyle bir hatayı erken tespit edip gerektiği zaman müdahele edebilirdim ancak `CI` entegrasyonu olmadığı için git üstünden test branch'i açarak eski commitlere gitmem gerekti. Tüm günümü bu hataya ayırdığım için `CI` entegrasyonu yapmaya karar verdim ve temellerini öğrenmeye başladım. Şirkette `GitLab` kullanıyoruz ve GitLab'a gömülü olarak `GitLab CI/CD` aracı geliyor. Yani `travis`, `jenkins` gibi ekstra bir servis kullanmamıza gerek yok tek bir çatı altında hem git deposu hem CI aracımız var. GitLab'ın CI aracını öğrenmeye başladım ve yakında projeye entegre edeceğim.
 
 `FontAwesome 4` ile `FontAwesome 5` arasındaki farkı öğrendim. 4. versiyonda `fa` kullanıyoruz, 5. versiyonda ikon tipine göre yani solid etiketli bir ikonsa `fas` vs. şeklinde kullanılıyor.
 
 Bugünkü planım bildirim sistemini bitirmekti ama çıkan hata yüzünden kod yazmaya fırsat bulamadım.
 
-Bugün ayrıca `Atom`'un yavaşlığından bıkıp `VSCode`'a geçtim.
+Bugün ayrıca `Atom`'un yavaşlığından bıktığım için `VSCode`'a geçtim.
 
 ## Day-23
 
-Android'de çıkan hatayı erkenden çözdüm. Htanın sebebi bundle dosyasını derleme esnasında oluşturmaması. Bu sebeple runtime error alıyorduk. Çözüm için bir `NPM script` yazdım ve derleme yaparken ilk adım olarak artık farklı bir komutla bundle oluşturup ardından derleme işine geçiyor.
+Android'de çıkan hatayı erkenden çözdüm. Hatanın sebebi bundle dosyasını derleme esnasında oluşturmaması. Bu sebeple runtime error alıyorduk. Çözüm için bir `NPM script` yazdım ve derleme yaparken ilk adım olarak artık farklı bir komutla bundle oluşturup ardından derleme işine geçiyor.
 
 `VSCode`'a alıştım. Sol tarafta dikey bir menü olması garibime gidiyor sadece. Sublime Text, VSCode yanıdna `Zen Mode`'u açılmış gibi bir havası var. Sublime Text ile yazı yazmak halen daha zevkli. İleride VSCode'u Sublime Text kadar yalın bir şekle sokmak istiyorum. Sadece ihtiyacım olduğunda sol dikey menü önümde olmalı mesela.
 
@@ -271,7 +271,7 @@ Günün sonlarında `Git Stash` denen naneyi öğrendim. Normalde çalıştığ�
 
 Bildirim sistem bitti. `Google Play Console` hesabı açtık ve uygulamayı incelenmek üzere gönderdik, incelme işi bitince Play Store'da yayınlanacak. Yayınlama işini ben üstlendim ve android için uygulama yayınlarken ne yapılır öğrenmiş oldum. Uygulamada ufak stil hataları dışında bir şey kalmadı. `MVP` sürümü çıkardık artık müşteriye sunulabilir. Bundan sonra geri bildirimlerle ekstra özellikler eklenecek.
 
-Tüç işlerim bittiği için asana'da duran bir özelliği geliştirmeye başladım. Manuel ürün ekleme özelliği, qr kod okunamaz bir haldeyse ürün kodunu elle girerek ürün ekleyebilmeyi sağlayacak. Bu özelliğin temelini yazdım kalan kısmını yarın bitirmeyi düşünüyorum.
+Tüm işlerim bittiği için Asana'da duran bir özelliği geliştirmeye başladım. Özelliğin adı: Manüel ürün ekleme, qr kod okunamaz bir haldeyse ürün kodunu elle girerek ürün ekleyebilmeyi sağlayacak. Bu özelliğin temelini yazdım kalan kısmını yarın bitirmeyi düşünüyorum.
 
 Uygulamayı sürüm adı vermeyi öğrendim.
 
@@ -282,8 +282,8 @@ Uygulamayı sürüm adı vermeyi öğrendim.
 - Beta
 - Launch 
 
-İlk başta bir prototip çıkartılıyor, UX tasarımı vs her şey burada belirleniyor. POC ile testler yapılıyor ve hangi teknolojiler seçilecek bu özellik olur mu olmaz mı diye yazmaya başlıyoruz, elimizdeki veriler hardcoded olmalı API beklememize gerek yok. Sonrasında tüm olmasa da olur özellikleri eleyip (push notification vs) MVC sürümü çıkartıyoruz, bu sürümde elimizdeki datalar API ve hardcoded olmak üzere iki şekilde de olabilir. Sonrasında alpha sürümünde temel şeyleri geliştiriyoruz, bu sürüm halen kullanıcıya sunulacak yapıda değil, ekip içi uygulamayı test edip geri dönüşlerle geliştirme yapılıyor. Beta'ya geçince daha az `breaking change` yapacağımız için hedef kullanıcı kitlesine beta sürümü altında dağıtabiiyoruz, hedef kullanıcılardan aldığımız dönüşlerle uygulamayı şekillendiriyoruz. Beta sürümün bir yararı, erken hata tespiti, ullanıcıalrın uygulamaları crash oldukça elimize gelen hata raporları ile ileride çok büyük dert olacak sorunları burada çözebiliyoruz. En sonunda hedeflerdiğimiz prototipe ulaşınca launch sürümü çıkıyor ve uygulamanın sürümü 1.0.0 artık.
+İlk başta bir prototip çıkartılıyor, UX tasarımı vs her şey burada belirleniyor. POC ile testler yapılıyor ve hangi teknolojiler seçilecek bu özellik olur mu olmaz mı diye yazmaya başlıyoruz, elimizdeki veriler hardcoded olmalı API beklememize gerek yok. Sonrasında tüm olmasa da olur özellikleri eleyip (push notification vs) MVC sürümü çıkartıyoruz, bu sürümde elimizdeki datalar API ve hardcoded olmak üzere iki şekilde de olabilir. Sonrasında alpha sürümünde temel şeyleri geliştiriyoruz, bu sürüm halen kullanıcıya sunulacak yapıda değil, ekip içi uygulamayı test edip geri dönüşlerle geliştirme yapılıyor. Beta'ya geçince daha az `breaking change` yapacağımız için hedef kullanıcı kitlesine beta sürümü altında dağıtabiliyoruz, hedef kullanıcılardan aldığımız dönüşlerle uygulamayı şekillendiriyoruz. Beta sürümün bir yararı, erken hata tespiti, ullanıcıların uygulamaları crash oldukça elimize gelen hata raporları ile ileride çok büyük dert olacak sorunları burada çözebiliyoruz. En sonunda hedeflerdiğimiz prototipe ulaşınca launch sürümü çıkıyor ve uygulamanın sürümü 1.0.0 artık.
 
 Bundan sonra şirket içinde yapacağım uygulamalara bu şekilde geliştirmeye özen göstericem. Hatta ve hatta bu semantik versiyonlama hakkında bana yardımcı olabilecek araçları araştırmaya başladım. Yakında projeye dahil edip otomatik sürüm numarası verme gibi şeyler eklemeyi düşünüyorum.
 
-Proje rayına oturduğu için öğrendiğim pek bir şey yok, artık major değişiklikler yerine minor ve patch yazıyorum genellikle. Bu sebeple anlatacak bir şey çıkmıyor.
+Proje rayına oturduğu için öğrendiğim pek bir şey yok, artık major değişiklikler yerine genelde minor ve patch yazıyorum. Bu sebeple anlatacak bir şey çıkmıyor. Major değişiklikler bittiği için kodun kalitesini arttıracak bir sürü şey yaptım, yüzlerce satırı elden geçirdim ve daha kolay okunabilir ve anlaşılır hale getirdim. Sırf bugün en az 600 satır `code refactoring` işlemi yaptım.
