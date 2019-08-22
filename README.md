@@ -287,3 +287,15 @@ Uygulamayı sürüm adı vermeyi öğrendim.
 Bundan sonra şirket içinde yapacağım uygulamalara bu şekilde geliştirmeye özen göstericem. Hatta ve hatta bu semantik versiyonlama hakkında bana yardımcı olabilecek araçları araştırmaya başladım. Yakında projeye dahil edip otomatik sürüm numarası verme gibi şeyler eklemeyi düşünüyorum.
 
 Proje rayına oturduğu için öğrendiğim pek bir şey yok, artık major değişiklikler yerine genelde minor ve patch yazıyorum. Bu sebeple anlatacak bir şey çıkmıyor. Major değişiklikler bittiği için kodun kalitesini arttıracak bir sürü şey yaptım, yüzlerce satırı elden geçirdim ve daha kolay okunabilir ve anlaşılır hale getirdim. Sırf bugün en az 600 satır `code refactoring` işlemi yaptım.
+
+## Day-28
+
+2 gün geçmesine rağmen gönderdiğim uygulama hala inceleme altında. İlk yükleme sadece bu kadar uzun sürüyor, sonrasında uygulamayı güncellediğimizde bildiğim kadarıyla ortalama 5 saat içinde güncelleniyor.
+
+Uygulama toplam 4581 satır ve resim türevi sabitler hariç 33 dosyadan oluşuyor. 
+
+Bugün hedeflediğim manüel ürün ekleme sayfasını bitirdim. Önceden bu özelliğin yarısını yazmıştım ancak daha mantıklı bir tasarım aklıma geldiği için sıfırdan yazdım ve aynı gün bitti. Bunun dışında bugün 2 saatimi uygulamayı kullanırken çıkabilecek hatalar için sayfa hazırlayarak geçirdim. İnternet olmadığında, Kokpit sunucusu çöktüğünde vs. kullanıcıya neden hata olduğu gösteriliyor.
+
+Bu arada `code refactoring` işlemine devam ediyorum.
+
+API'da bir sürü hata buldum ve Asana'ya kaydettim, API güncellenince oturup kodda bir kaç yeri revize etmem gerekecek.
