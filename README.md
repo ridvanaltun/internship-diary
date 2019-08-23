@@ -38,7 +38,7 @@ Flash ışık açma-kapama komponentine QR kodu görünce otomatik ışık açma
 
 ## Day-05
 
-Ofiste kimse olmaması yüzünden ve hafta sonu sebebiyle 4 gün evde boş zamanımda uygulamayı geliştirdim. Sonucunda bugün uygulamanın %90'ı bitti ve iş yerindeki insanlara gösterdim. Üstüne bazı kararlar aldık ve uygulama için yeni bir yol çizdik, bazı özellikler değiştiği için uygulama %50 bitti diyebilirim. Herneyse, bugün firmanın `git` servisine kaydoldum ve hesabım açıldı. Bunun dışında `asana` servisi ile bir `todo list` hazırlayıp öncelikleri sıraladık. Uygulama beklediğimden daha geniş bir seviyeye çekildi ve yeni özellikler hakkında konuştuk. Hazırladığım uygulama tüm `kokpit` servisini kapsıyor artık. Kokpit'i uygulamaya entegre etmek için `InBrowser` adında bir reack-native kütüphanesi kullanmayı planlıyorum.
+Ofiste kimse olmaması yüzünden ve hafta sonu sebebiyle 4 gün evde boş zamanımda uygulamayı geliştirdim. Sonucunda bugün uygulamanın %90'ı bitti ve iş yerindeki insanlara gösterdim. Üstüne bazı kararlar aldık ve uygulama için yeni bir yol çizdik, bazı özellikler değiştiği için uygulama %50 bitti diyebilirim. Her neyse, bugün firmanın `git` servisine kaydoldum ve hesabım açıldı. Bunun dışında `asana` servisi ile bir `todo list` hazırlayıp öncelikleri sıraladık. Uygulama beklediğimden daha geniş bir seviyeye çekildi ve yeni özellikler hakkında konuştuk. Hazırladığım uygulama tüm `kokpit` servisini kapsıyor artık. Kokpit'i uygulamaya entegre etmek için `InBrowser` adında bir reack-native kütüphanesi kullanmayı planlıyorum.
 
 Çoklu dil desteği eklenecek, bunun üstüne araştırma yapmam gerekiyor. `Deep Linking` mevzusundan vaz geçildi, uygulamanın `standalone` şekilde çalışması isteniyor. QR kod içindeki static veri yerine artık sunucudan veri çekme şeklinde olacak, yani artık QR kod içinde sadece id bilgisi barınıyor olacak.
 
@@ -183,7 +183,7 @@ Bugün `kokpit customer` uygulamasını ayağa kaldırana kadar çıkan hatalar�
 
 Bugün kodu daha okunabilir kılmak için düzelttim. Üstüne daha fazla kod yazamıyorum çünkü bana bu yönde istek gelmesi gerekiyor.
 
-Herneyse, atom editörünü aktif kullanmaya başladım ve bir sürü paket yükledim. Çok garip bir şekilde sublime'da olmayan bir çok özellik atom için yazılmış.
+Her neyse, atom editörünü aktif kullanmaya başladım ve bir sürü paket yükledim. Çok garip bir şekilde sublime'da olmayan bir çok özellik atom için yazılmış.
 
 ## Day-18
 
@@ -299,3 +299,20 @@ Bugün hedeflediğim manüel ürün ekleme sayfasını bitirdim. Önceden bu öz
 Bu arada `code refactoring` işlemine devam ediyorum.
 
 API'da bir sürü hata buldum ve Asana'ya kaydettim, API güncellenince oturup kodda bir kaç yeri revize etmem gerekecek.
+
+## Day-29
+
+Gün içinde Kokpit uygulaması `Google Play`'de yayınlandı. Böylelikle ilk android uygulamamı yayınlamış oldum. 
+
+`brew` aracı nedir ne değildir öğrendim, ben bu aracı sadece macOS ta var sanıyordum ancak linux içinde varmış. Linux paket sunucusunda bulunmayan 3. parti programları kurmamızı sağlıyor kısaca bu program, npm, pip, gem gibi bir kullanımı var.
+
+Bugün programdaki kritik bir kaç stil hatasının üstünden geçtim. Manüel ürün girme sayfasına flash ışığı özelliği ekledim. Uygulama içinde kamera modülü kullandığımız için flash ile çalışmak zorlaşıyor çünkü kamera açıkken flash'a mudahele edemiyoruz. Bu sebeple "manuel ürün girme" sayfasıdna flash özelliği için workaround çözümler kullandım.
+
+Kokpit'in mobil görünümünde bir kaç syil hatası var, bunları düzeltmem istendi. Kokpit bir docker konteynırı ve projeyi ayağa kaldırmak için linux içinde çalışan bir .sh uzantılı bir bash script yazılmış. Benim geliştirme ortamım windows olduğu için bir problem teşkil ediyor. Bu sebeple ilk iş olarak windows içinde linux geliştirme ortamı edinmem gerekiyor. Yada daha basiti bash programını işletim sistemime kurar scriptti windows için düzenlerim ve aynı sonucu elde ederim.
+
+Geliştirme ortamımda hali hazırda `WSL` var. Windows altında ubuntu kullanabiliyorum. Şans eseri WSL üstünde grafik tabanlı uygulama nasıl çalıştırılır öğrendim. Örneğin WSl içinde sublime text çalıştırabiliyorum. Bunun için `MobaXterm` adında bir program kuruyoruz, bu program yanında `X11 Server` ile birlikte geliyor. `WSL` altıdnaki işletim sistemimizin `.bashrc` dosyasına `export DISPLAY=:0` şeklinde bir değişken ekliyoruz. Arkada X11 Server çalışırken artık konsoldan gui tabanlı bir linux programı çaltırdığımızda ekrana geliyor.
+
+`WSL` üstünde kopyalama-yapıştırma problemi var, bunu çözmem gerekiyor. Her neyse, WSL içine docker yükledim.
+
+`Red Hat` işletiminin diğer linux dağıtımları arasındaki farkı öğrendim. Red Hat ücretli ve pahalı bir linux dağıtımı, Bu işletim sistemini geliştirmek için `free tier` olarak `CentOS` dağıtılıyor, normal kullanıcıların aldığı hatalar düzeltilerek Red Hat içine yeni özellikler entegre ediliyor. Bu sistemin paket yöneticisinin adı da `yum`.
+
