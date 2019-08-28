@@ -195,7 +195,7 @@ Beş gündür üstüne parça parça uğraştığım `lottie` entegrasyonunu bug
 
 `Firebase`'i entegre ettim ve artık `Firebase API`'larını uygulama içinde kullanabilir hale geldim. Bunun üstüne `Crashlytics` servisini entegre ettim ve artık uygulama çökünce çökme raporları Firebase üstündeki crashlytics paneline geliyor. Bu şekilde artık sık sık gelen hataları görüp uygulama içinde gereken düzeltmeleri sağlayabiliriz.
 
-`Firebase` entegrasyonu için `react-native` paketini `0.59.10` dan `0.64`'e yükseltmek zorunda kaldım. Önceden de denemiştim bunu ancak başarılı olamamıştım. Bazı major değişiklikler olduğu için kod patladı ancak tane tane tüm sorunları çözerek entegre ettim ve native kodu okuma yeteneğim gelişti diyebilirim, artık gözüme daha az korkunç geliyor. Bu yükseltme işi sayesinde `lottie`'yi entegre edebildim zaten. 
+`Firebase` entegrasyonu için `react-native` paketini `0.59.10` dan `0.60.4`'e yükseltmek zorunda kaldım. Önceden de denemiştim bunu ancak başarılı olamamıştım. Bazı major değişiklikler olduğu için kod patladı ancak tane tane tüm sorunları çözerek entegre ettim ve native kodu okuma yeteneğim gelişti diyebilirim, artık gözüme daha az korkunç geliyor. Bu yükseltme işi sayesinde `lottie`'yi entegre edebildim zaten. 
 
 ## Day-19
 
@@ -282,7 +282,7 @@ Uygulamayı sürüm adı vermeyi öğrendim.
 - Beta
 - Launch 
 
-İlk başta bir prototip çıkartılıyor, UX tasarımı vs her şey burada belirleniyor. POC ile testler yapılıyor ve hangi teknolojiler seçilecek bu özellik olur mu olmaz mı diye yazmaya başlıyoruz, elimizdeki veriler hardcoded olmalı API beklememize gerek yok. Sonrasında tüm olmasa da olur özellikleri eleyip (push notification vs) MVC sürümü çıkartıyoruz, bu sürümde elimizdeki datalar API ve hardcoded olmak üzere iki şekilde de olabilir. Sonrasında alpha sürümünde temel şeyleri geliştiriyoruz, bu sürüm halen kullanıcıya sunulacak yapıda değil, ekip içi uygulamayı test edip geri dönüşlerle geliştirme yapılıyor. Beta'ya geçince daha az `breaking change` yapacağımız için hedef kullanıcı kitlesine beta sürümü altında dağıtabiliyoruz, hedef kullanıcılardan aldığımız dönüşlerle uygulamayı şekillendiriyoruz. Beta sürümün bir yararı, erken hata tespiti, ullanıcıların uygulamaları crash oldukça elimize gelen hata raporları ile ileride çok büyük dert olacak sorunları burada çözebiliyoruz. En sonunda hedeflerdiğimiz prototipe ulaşınca launch sürümü çıkıyor ve uygulamanın sürümü 1.0.0 artık.
+İlk başta bir prototip çıkartılıyor, UX tasarımı vs her şey burada belirleniyor. POC ile testler yapılıyor ve hangi teknolojiler seçilecek bu özellik olur mu olmaz mı diye yazmaya başlıyoruz, elimizdeki veriler hardcoded olmalı API beklememize gerek yok. Sonrasında tüm olmasa da olur özellikleri eleyip (push notification vs) MVC sürümü çıkartıyoruz, bu sürümde elimizdeki datalar API ve hardcoded olmak üzere iki şekilde de olabilir. Sonrasında alpha sürümünde temel şeyleri geliştiriyoruz, bu sürüm halen kullanıcıya sunulacak yapıda değil, ekip içi uygulamayı test edip geri dönüşlerle geliştirme yapılıyor. Beta'ya geçince daha az `breaking change` yapacağımız için hedef kullanıcı kitlesine beta sürümü altında dağıtabiliyoruz, hedef kullanıcılardan aldığımız dönüşlerle uygulamayı şekillendiriyoruz. Beta sürümün bir yararı, erken hata tespiti, kullanıcıların uygulamaları crash oldukça elimize gelen hata raporları ile ileride çok büyük dert olacak sorunları burada çözebiliyoruz. En sonunda hedeflerdiğimiz prototipe ulaşınca launch sürümü çıkıyor ve uygulamanın sürümü 1.0.0 artık.
 
 Bundan sonra şirket içinde yapacağım uygulamalara bu şekilde geliştirmeye özen göstericem. Hatta ve hatta bu semantik versiyonlama hakkında bana yardımcı olabilecek araçları araştırmaya başladım. Yakında projeye dahil edip otomatik sürüm numarası verme gibi şeyler eklemeyi düşünüyorum.
 
@@ -316,3 +316,30 @@ Geliştirme ortamımda hali hazırda `WSL` var. Windows altında ubuntu kullanab
 
 `Red Hat` işletiminin diğer linux dağıtımları arasındaki farkı öğrendim. Red Hat ücretli ve pahalı bir linux dağıtımı, Bu işletim sistemini geliştirmek için `free tier` olarak `CentOS` dağıtılıyor, normal kullanıcıların aldığı hatalar düzeltilerek Red Hat içine yeni özellikler entegre ediliyor. Bu sistemin paket yöneticisinin adı da `yum`.
 
+`fc` adında bir komut öğrendim. Komut geçmişine bakıp belli bir sıradaki komutları tekrar çalıştırmak mümkün. `fc 500 510` yapınca 500-510 arası tüm komutlar önce default editörde açlır sonra editörden çıkınca bu komutlar çalıştırılır.
+
+`meld` adında bir program öğrendim, bu program git'e `.gitconfig` dosyası üstünden yada 2 satır git komutu ile entegre ediliyor ve `git mergetool` komutu girdiğimizde merge yapmalık bir işlem varsa projede bu program üstünden halledebiliyoruz. Aynı şekilde diff aracı olarak ta kullanılabilir, yine git'e entegre edebiliyoruz. `git difftool` şeklinde çağırdığımızda bu programı açtırabiliriz yani.
+
+`fuzzy finder` olan bir programı inceleme şansım oldu, bu programın bir çok işlevi var. Tek başına `fzf` ile çalıştırınca bulunduğumuz klasördeki tüm dosyaları seçebileceğimiz şekilde listeliyor, birini seçtiğimizde sadece adını -dosya yolu ile birlikte- döndürüyor. Bizde pipe kullanarak bu bilgiyi alıp başka programlara çok kolay bir şekilde paslayabiliyoruz. Bu nedenle script yazmak için fuzzy finder kullanıyoruz. Örneğin bulunduğumuz projedeki bir dosyayı seçme ekranı yadımıyla seçip tıkladığımızda istediğimiz editörde açtırabiliriz, büyük projeler için güzel bir özellik. Bunu yapmak için bu arada fonksiyon şeklinde alias yazmamız lazım.
+
+`.profile` adlı dosyanın linux sistemlerde ne işe yaradığını öğrendim, bu dosyalar kullanıcıya özgü oluyor ve kullanıcı ilk login olduğunda bu dosya çalıştırılıyor yani kullanıcıya özgü çalıştırılan bir script dosyası. Bu dosya ayrıca macOS ta da kullanılıyormuş. Linux sisteminde bulunan `/etc/profile` dosyası ise tüm kullanıcılarda çalıştırılan bir script. Sanırım bu dosyanın `.bashrc`'den tek farkı bash'tan bağımsız -örneğin zsh- ile çalışabiliyor olması.
+
+## Day-30
+
+Bugün stajın son günü.
+
+Elimi mobilden çekip PHP'ye bulaştırdım. Kokpit'in temellerini öğreniyorum. Şu ana kadar bu sebeple docker, docker-compose ve phinx kullanımını ve mantığını öğrendim. PHP temellerini öğrenmeye başladım. PHP, öğrenmek istediğim bir dil değildi ancak gayet basit bir dilmiş bugün bunu gördüm. PHP hakkında ilk günden 150 satır not çıkardım. PHP'de kapsama alanları, class ve nesne yapısı, PHP'nin OOP yönü ve sık kullanılan methodlar hakkında notlar tuttum.
+
+PHP'nin hakkını vermek için API'daki sorunların bir kısmını şirketteki Tolga abi ile `pair programming` yaparak çözdük. Asana'da tanımlanmış 4 farklı API hatası vardı ve gün içinde hepsi bitti. 
+
+Pair programming karşıdaki insanın tecrübelerini almak için güzel bir yöntem.
+
+ETOM şirketinin Kokpit yanında bir çok ürün var ve hepsinin temeli aslında Kokpit ile aynı. Yani phinx, docker ve docker-compose gibi araç ve teknolojileri öğrenerek şirket içinde her projeye katkı sağlayabilecek bir konuma geliyoruz.
+
+Kokpit ile çalışmak için öncelikle bir geliştirme ortamına sahip olmak gerekiyor. Ben Windows ile geliştirme yaptığım için bazı sorunlar ile karşılaştım ancak çözmesi zor problemler değildi, bir çok şey denedim ve çözüm kısaca. WSL ile windows üstünde bulunan docker machine'i bağladım ve WSL içinde docker kullanarak Kokpit projesini ayağa kaldırabiliyorum. Böylelikle windows içinde hem Windows hem Linux bir geliştirme ortamına sahibim.
+
+Süreç boyunca çok şey öğrendim. Normalde kişisel projelerimde bazı konularda ne yapmam konusunda kararsız kaldığım için projelerim yavaş ilerler. Staj sonunda öğrendiğim en önemli şey planlı ve düzenli bir çalışmanın kolay görünmeyen ama zaman maliyeti olan bir çok problemi çözdüğü. Önemli olan şey kod yazma becerisi değil projeyi yönetebilme becerisi. Teknik problemleri çözecek bir çok kaynak var ancak programlı olmazsak ve akıllı davranmazsak eğer bazı gizli maliyetleri ödemek zorunda kalıyoruz.
+
+Hey neyse, bu staj tecrübesi benim için uzun, zor ve keyifliydi. İşi aldım bu arada :).
+
+EOF
